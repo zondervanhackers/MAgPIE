@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.niso.org/schemas/counter" elementFormDefault="qualified" targetNamespace="http://www.niso.org/schemas/counter" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Report" type="tns:Report" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Report">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Vendor" type="tns:Vendor" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Customer">
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="tns:Customer">
+              <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="ReportItems" type="tns:ReportItem" />
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Title" type="xs:string" />
+    <xs:attribute name="Version" type="xs:string" />
+    <xs:attribute name="Created" type="xs:string" />
+    <xs:attribute name="ID" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Vendor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Organization" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Organization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contact" type="tns:Contact" />
+      <xs:element minOccurs="0" maxOccurs="1" name="WebSiteUrl" type="xs:anyURI" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LogoUrl" type="xs:anyURI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Contact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Contact" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="E-mail" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Customer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Organization">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Consortium" type="tns:Consortium" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="InstitutionalIdentifier" type="tns:Identifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Consortium">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Code" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="WellKnownName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Identifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Type" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReportItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemIdentifier" type="tns:Identifier" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ItemPlatform" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ItemPublisher" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ItemName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ItemDataType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemPerformance" type="tns:Metric" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Metric">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Period" type="tns:DateRange" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Category" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Instance" type="tns:PerformanceCounter" />
+    </xs:sequence>
+    <xs:attribute name="PubYrTo" type="xs:string" />
+    <xs:attribute name="PubYrFrom" type="xs:string" />
+    <xs:attribute name="PubYr" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="DateRange">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Begin" type="xs:date" />
+      <xs:element minOccurs="1" maxOccurs="1" name="End" type="xs:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PerformanceCounter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="MetricType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Count" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

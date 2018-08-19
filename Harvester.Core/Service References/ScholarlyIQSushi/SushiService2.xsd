@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.niso.org/schemas/sushi" elementFormDefault="qualified" targetNamespace="http://www.niso.org/schemas/sushi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ReportRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Requestor" type="tns:Requestor" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CustomerReference" type="tns:CustomerReference" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ReportDefinition" type="tns:ReportDefinition" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" />
+    <xs:attribute name="Created" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Requestor">
+    <xs:annotation>
+      <xs:appinfo>
+        <keepNamespaceDeclarations>xmlns</keepNamespaceDeclarations>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Email" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CustomerReference">
+    <xs:annotation>
+      <xs:appinfo>
+        <keepNamespaceDeclarations>xmlns</keepNamespaceDeclarations>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ID" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReportDefinition">
+    <xs:annotation>
+      <xs:appinfo>
+        <keepNamespaceDeclarations>xmlns</keepNamespaceDeclarations>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Filters">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="UsageDateRange" type="tns:Range" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Release" type="xs:string" />
+    <xs:attribute name="Name" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Range">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Begin" type="xs:date" />
+      <xs:element minOccurs="1" maxOccurs="1" name="End" type="xs:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReportResponse">
+    <xs:annotation>
+      <xs:appinfo>
+        <keepNamespaceDeclarations>xmlns</keepNamespaceDeclarations>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Exception" nillable="true" type="tns:Exception" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Requestor" type="tns:Requestor" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CustomerReference" type="tns:CustomerReference" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ReportDefinition" type="tns:ReportDefinition" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" />
+    <xs:attribute name="Created" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Number" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Severity" type="tns:ExceptionSeverity" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Message" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="HelpUrl" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Data" nillable="true" />
+    </xs:sequence>
+    <xs:attribute name="Created" type="xs:string" />
+  </xs:complexType>
+  <xs:simpleType name="ExceptionSeverity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Info" />
+      <xs:enumeration value="Debug" />
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="Error" />
+      <xs:enumeration value="Fatal" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Activity" />
+</xs:schema>

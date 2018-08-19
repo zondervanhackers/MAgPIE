@@ -1,0 +1,1446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.ConfigurationFileException" Collapsed="true">
+    <Position X="28" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\ConfigurationFileException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.OperationException" Collapsed="true">
+    <Position X="36.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\OperationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryConfigurationException" Collapsed="true">
+    <Position X="8.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Exceptions\RepositoryConfigurationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryException" Collapsed="true">
+    <Position X="11" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryImplementationException" Collapsed="true">
+    <Position X="11" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Exceptions\RepositoryImplementationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryIOException" Collapsed="true">
+    <Position X="13.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAECAAAAACAA=</HashCode>
+      <FileName>Exceptions\RepositoryIOException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.DemographicRecord" Collapsed="true">
+    <Position X="22.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAACAAAIAAAAAAAAAAAABAAAgAACoAAA=</HashCode>
+      <FileName>Operations\DemographicRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.ImportCounterTransactionsOperation" Collapsed="true">
+    <Position X="1" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAABAA=</HashCode>
+      <FileName>Operations\ImportCounterTransactionsOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.ImportCounterTransactionsOperationArguments" Collapsed="true">
+    <Position X="0.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Operations\ImportCounterTransactionsOperationArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.ImportDemographicsOperation" Collapsed="true">
+    <Position X="5.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAoIJggAAAQAAJAAAQAAAAAAAAABQAAIAAAAggE=</HashCode>
+      <FileName>Operations\ImportDemographicsOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.ImportDemographicsOperationArguments" Collapsed="true">
+    <Position X="5.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Operations\ImportDemographicsOperationArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.ImportWmsInventoryOperation" Collapsed="true">
+    <Position X="10" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAEAAAAQAAAAAAAQAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Operations\ImportWmsInventoryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.ImportWmsInventoryOperationArguments" Collapsed="true">
+    <Position X="7.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Operations\ImportWmsInventoryOperationArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.ImportWmsTransactionOperation" Collapsed="true">
+    <Position X="12.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgBAAAAAAEAAAAQAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Operations\ImportWmsTransactionOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.ImportWmsTransactionOperationArguments" Collapsed="true">
+    <Position X="9.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Operations\ImportWmsTransactionOperationArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.InventoryRecord" Collapsed="true">
+    <Position X="35" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgUgEEAAgAgAABAAAAAAAAAACAAEAAAAAiE=</HashCode>
+      <FileName>Operations\InventoryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.LexisNexisBrowser" Collapsed="true">
+    <Position X="28" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Operations\LexisNexisBrowser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.OperationArgumentsBase" Collapsed="true">
+    <Position X="5.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Operations\OperationArgumentsBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.OperationBase" Collapsed="true">
+    <Position X="6.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Operations\OperationBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.OperationContext" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="35" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAgABAAAQAAAAAIAAAEAAgBAAAA=</HashCode>
+      <FileName>Operations\OperationContext.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.SyncOperation" Collapsed="true">
+    <Position X="3.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Operations\SyncOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.SyncOperationArguments" Collapsed="true">
+    <Position X="3" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Operations\SyncOperationArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.TransferFileOperation" Collapsed="true">
+    <Position X="7.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAEAAAAAAAAAQAAAAAAAQAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Operations\TransferFileOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.TransferFileOperationArguments" Collapsed="true">
+    <Position X="24.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACCAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Operations\TransferFileOperationArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.WmsInventoryRecord" Collapsed="true">
+    <Position X="26.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABEAACAAgUgEEAAgAAAABAQAQAAAAAYAAAEAAEAgiE=</HashCode>
+      <FileName>Operations\WmsInventoryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.WmsInventoryRecordDiff" Collapsed="true">
+    <Position X="28" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABEAACAAgUCEEAAgAAAABAQAQAAAAAYAAAEAAEAgiE=</HashCode>
+      <FileName>Operations\WmsInventoryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Operations.WmsTransactionRecord" Collapsed="true">
+    <Position X="29.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAACAAAAAAAEAIAAAAAAAEAQAAAAAAA=</HashCode>
+      <FileName>Operations\WmsTransactionRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.CounterRecord" Collapsed="true">
+    <Position X="26.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAEoAAAAAAAAABBAAAAgAAAIAAgA=</HashCode>
+      <FileName>Repository\Counter\CounterRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.CounterIdentifier" Collapsed="true">
+    <Position X="22.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Counter\CounterRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.CounterMetric" Collapsed="true">
+    <Position X="24.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Counter\CounterRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.DatabaseRecord" Collapsed="true">
+    <Position X="33.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAgCAAIAAAAAAAAAAAAAAAABAAQ=</HashCode>
+      <FileName>Repository\Counter\DatabaseRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.EbscoHostCounterRepository" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAIBAAICAAAAIAAAAAAAUAIAEAAAAAQCAAAABAAAA=</HashCode>
+      <FileName>Repository\Counter\EbscoHostCounterRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.EbscoHostCounterRepositoryArguments" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAACAAAAAA=</HashCode>
+      <FileName>Repository\Counter\EbscoHostCounterRepositoryArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.JournalRecord" Collapsed="true">
+    <Position X="26.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAgAAACAAgEAAAAAAAAAAABAAAAAAABAAA=</HashCode>
+      <FileName>Repository\Counter\JournalRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.SushiCounterRepository" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAICAAAEAIAIAAAAAAAAEEAAAAQCAAAGAAAAA=</HashCode>
+      <FileName>Repository\Counter\SushiCounterRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.SushiCounterRepositoryArguments" Collapsed="true">
+    <Position X="1" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAIAAgAAAAAAAAAAAAEAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Counter\SushiCounterRepositoryArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.SushiServiceInterfaceClientFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Counter\SushiServiceInterfaceClientFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.SushiServiceInterfaceClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="36.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAQAAAAAAAAAAAAAAAACAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Counter\SushiServiceInterfaceClient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ReportRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAgAAiAABAkAAAAAAAAAAAgAAAASQAQAAAgQAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Requestor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAgAAAAIIAAAQAgAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.PerformanceCounter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAACAAAAAAAAAAAAAAQAgAgAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.DateRange" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="35" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQACAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Metric" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAICAAAABAQAAAAAAQAAgAAAAAAQQACQAAAACAI=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ItemAttribute" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="36.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAACAAAAAAAAAAAAgAACAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ItemDate" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAACAAAAAAAAAAAAgAACAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ItemContributorID" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAACAAAAAAAAAAAAgAACAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ItemContributor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABACAAQACAAAAAAAAQAAgACAAAAIAAAAAACAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ParentItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAACAAkAAAAAAAAAEABigAAAAAAIAAAAAANAQAk=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Identifier" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAACAAAAAAAAAAAAgAACAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ReportItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAACAAmAAAAQAEBAEABigAAAAAAIAAgAAANCQAk=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Consortium" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAQAAAAAAgAAAAgAAAAAAEAAAgAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Contact" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAAAAEAAIAAAAAgAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Organization" Collapsed="true">
+    <Position X="6.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAgAgQAACJAAAAQAgAgAACAAAAAAAAAAAAE=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Vendor" Collapsed="true">
+    <Position X="5.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Customer" Collapsed="true">
+    <Position X="7.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQQAAAAAAAAAgAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Report" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="36.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBEAAAAiAABAgEAAAIAAAgQAgAAAASRAAAAAAAAAAEA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ReportCustomer" Collapsed="true">
+    <Position X="7.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Activity" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Exception" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAiAABAAAEAIEAAAAAAgAAAARQAAAAAIASAIAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ReportResponse" Collapsed="true">
+    <Position X="18.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAgAAiAABAkAIAAAAAAAAAgAAAASQAQABAgQAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.CustomerReference" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAgAAAAIAAAAQAgAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ReportDefinition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAEAAIAAAAQCgAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ReportDefinitionFilters" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABCAAAgEAAABAAAAAAAgBAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Range" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQACAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.FilterName" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAIAAAAQAgAACAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ReportAttribute" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAIAAAAQAgAACAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.CounterReportResponse" Collapsed="true">
+    <Position X="18.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.GetReportRequest" Collapsed="true">
+    <Position X="21" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.GetReportResponse" Collapsed="true">
+    <Position X="24.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Database.SqlServerDatabaseRepository&lt;TDataContext&gt;" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAACAAAAAAAAAAAAAAAAAAQAAAQCAAAAAAAAA=</HashCode>
+      <FileName>Repository\Database\SqlServerDatabaseRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Database.SqlServerDatabaseRepositoryArguments" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAQAAAAAAAAAAEAACAAAAAgAAAAA=</HashCode>
+      <FileName>Repository\Database\SqlServerDatabaseRepositoryArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Directory.FolderDirectoryRepository" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAEAAAAACAABAAAAAQAAAEAAAAAAEAAYCkAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\FolderDirectoryRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Directory.FolderDirectoryRepositoryArguments" Collapsed="true">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\FolderDirectoryRepositoryArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Directory.FtpDirectoryRepository" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAEAAAAASAAAAAAAAQAAAEAAAAAAEAAQCEAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\FtpDirectoryRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Directory.FtpDirectoryRepositoryArguments" Collapsed="true">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAQAAAAAACAAACAACAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\FtpDirectoryRepositoryArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Directory.DirectoryObjectMetadata" Collapsed="true">
+    <Position X="24.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAQAAgAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\IDirectoryRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Directory.DirectoryRepositoryContracts" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgKABAAAAAQAACAAAAAAACABgAAAAAA=</HashCode>
+      <FileName>Repository\Directory\IDirectoryRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Directory.SftpDirectoryRepository" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAEAAAAACAAAAAAAAQAAAEAAAAAAEAAQCEAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\SftpDirectoryRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Directory.SftpDirectoryRepositoryArguments" Collapsed="true">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAACAACCAACAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\SftpDirectoryRepositoryArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.RepositoryArgumentsBase" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\RepositoryArgumentBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.RepositoryBase" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAABAAAAAQAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Repository\RepositoryBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.RepositoryExceptionMessage" Collapsed="true">
+    <Position X="26.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAICAAAAIiCIAAAAAAIAAIEAQEICAAAAABAAAAQ=</HashCode>
+      <FileName>Repository\RepositoryExceptionMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Core.Repository.RepositoryFactory" Collapsed="true">
+    <Position X="28" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAgAAACACAAAAA=</HashCode>
+      <FileName>Repository\RepositoryFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Scheduling.CompoundSchedule" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAACAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Scheduling\CompoundSchedule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Scheduling.CompoundScheduleArguments" Collapsed="true">
+    <Position X="15.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scheduling\CompoundScheduleArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Scheduling.IntervalSchedule" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAIBIAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Scheduling\IntervalSchedule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Scheduling.IntervalScheduleArguments" Collapsed="true">
+    <Position X="13.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAIIAAAAAgAAAAAAAAAAAAAEBIAAA=</HashCode>
+      <FileName>Scheduling\IntervalScheduleArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Scheduling.ScheduleArgumentsBase" Collapsed="true">
+    <Position X="14.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scheduling\ScheduleArgumentsBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.ReportRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAgAAiAABAkAAAAAAAAAAAgAAAASQAQAAAgQAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Requestor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAgAAAAIIAAAQAgAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.PerformanceCounter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAACAAAAAAAAAAAAAAQAgAgAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.DateRange" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="36.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQACAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Metric" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAACAAAABAAAAAAAAQAAgAAAAIAQQACAAAAACAI=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.ReportItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="35" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAACAAmAAAAQAEAAEABggAAAAAAAAAAAAAFCAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Identifier" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAACAAAAAAAAAAAAgAACAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Consortium" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAQAAAAAAgAAAAgAAAAAAEAAAgAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Contact" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="35" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAAAAEAAIAAAAAgAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Organization" Collapsed="true">
+    <Position X="1.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAgAgQAACJAAAAQAgAgAACAAAAAAAAAAAAE=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Vendor" Collapsed="true">
+    <Position X="0.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Customer" Collapsed="true">
+    <Position X="2.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQQAAAAAAAAAgAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Report" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBEAAAAiAABAgEAAAIAAAgQAgAAAASRAAAAAAAAAAEA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.ReportCustomer" Collapsed="true">
+    <Position X="2.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Activity" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Exception" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAiAABAAAEAIEAAAAAAgAAAARQAAAAAIASAIAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.ReportResponse" Collapsed="true">
+    <Position X="16.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAgAAiAABAkAIAAAAAAAAAgAAAASQAQABAgQAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.CustomerReference" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAgAAAAIAAAAQAgAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.ReportDefinition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAEAAIAAAAQCgAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.ReportDefinitionFilters" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABCAAAAEAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Range" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQACAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.CounterReportResponse" Collapsed="true">
+    <Position X="16.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.GetReportRequest" Collapsed="true">
+    <Position X="35" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.GetReportResponse" Collapsed="true">
+    <Position X="26.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.SushiServiceInterfaceClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="35" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAACAABAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.ReportRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAgAAiAABAkAAAAAAAAAAAgAAAASQAQAAAgQAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Requestor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAgAAAAIIAAAQAgAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.PerformanceCounter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAACAAAAAAAAAAAAAAQAgAgAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.DateRange" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQACAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Metric" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAICAAAABAQAAAAAAQAAgAAAAAAQQACQAAAACAI=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.ReportItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="36.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAACAAmAAAAQAEAAEABggAAAAAAAAAAAAAFCAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Identifier" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAACAAAAAAAAAAAAgAACAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Consortium" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAQAAAAAAgAAAAgAAAAAAEAAAgAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Contact" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="36.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAAAAEAAIAAAAAgAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Organization" Collapsed="true">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAgAgQAACJAAAAQAgAgAACAAAAAAAAAAAAE=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Vendor" Collapsed="true">
+    <Position X="15.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Customer" Collapsed="true">
+    <Position X="17.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQQAAAAAAAAAgAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Report" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="35" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBEAAAAiAABAgEAAAIAAAgQAgAAAASRAAAAAAAAAAEA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.ReportCustomer" Collapsed="true">
+    <Position X="17.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Activity" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Exception" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAiAABAAAEAIEAAAAAAgAAAARQAAAAAIASAIAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.ReportResponse" Collapsed="true">
+    <Position X="13.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAgAAiAABAkAIAAAAAAAAAgAAAASQAQABAgQAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.CustomerReference" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAgAAAAIAAAAQAgAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.ReportDefinition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAEAAIAAAAQCgAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.ReportDefinitionFilters" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABCAAAAEAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Range" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQACAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.CounterReportResponse" Collapsed="true">
+    <Position X="13.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.GetReportRequest" Collapsed="true">
+    <Position X="36.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.GetReportResponse" Collapsed="true">
+    <Position X="22.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.SushiServiceInterfaceClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAIAAgAAAAAAAAAQA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Operations.IOperation" Collapsed="true">
+    <Position X="21" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Operations\IOperation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Counter.ICounterRepository" Collapsed="true">
+    <Position X="3" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Counter\ICounterRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Counter.ISushiServiceInterfaceClient" Collapsed="true">
+    <Position X="17.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Counter\ISushiServiceInterfaceClient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.SushiServiceInterface" Collapsed="true">
+    <Position X="16.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.SushiServiceInterfaceChannel" Collapsed="true">
+    <Position X="15.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Database.IDatabaseRepository&lt;TDataContext&gt;" Collapsed="true">
+    <Position X="0.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Database\IDatabaseRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Directory.IDirectoryRepository" Collapsed="true">
+    <Position X="5.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAEAAAAAAAAAAAAAAQAAAEAAAAAAEAAAAEAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\IDirectoryRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.IRepository" Collapsed="true">
+    <Position X="3" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Repository\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Scheduling.ISchedule" Collapsed="true">
+    <Position X="22.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scheduling\ISchedule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.SushiServiceInterface" Collapsed="true">
+    <Position X="16.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.SushiServiceInterfaceChannel" Collapsed="true">
+    <Position X="16.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.SushiServiceInterface" Collapsed="true">
+    <Position X="10.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.SushiServiceInterfaceChannel" Collapsed="true">
+    <Position X="10.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Exceptions.ConfigurationExceptionCategory" Collapsed="true">
+    <Position X="28" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAEAgAAAAIBAAAAAABAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Exceptions\ConfigurationExceptionCategory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Exceptions.ImplementationExceptionCategory" Collapsed="true">
+    <Position X="36.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\ImplementationExceptionCategory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Exceptions.IOExceptionCategory" Collapsed="true">
+    <Position X="26.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAACAAAgAAAAA=</HashCode>
+      <FileName>Exceptions\IOExceptionCategory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Operations.DemographicGender" Collapsed="true">
+    <Position X="26.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAAA=</HashCode>
+      <FileName>Operations\DemographicRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Operations.DemographicLevel" Collapsed="true">
+    <Position X="28" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Operations\DemographicRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Operations.DemographicStudentType" Collapsed="true">
+    <Position X="33.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAum9VAQE=</HashCode>
+      <FileName>Operations\DemographicRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Operations.DemographicMajor" Collapsed="true">
+    <Position X="29.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ahiEA1AAgAXngWN8lbXCUIDCg9EKFgQAAEkSQCAJ1KQ=</HashCode>
+      <FileName>Operations\DemographicRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Operations.DemographicClass" Collapsed="true">
+    <Position X="24.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAgEAADAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Operations\DemographicRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Operations.DemographicResidence" Collapsed="true">
+    <Position X="31.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAQAgEAyBgAACAgBCk0KYACAwGBBEAAAAAAAAEAAIQA=</HashCode>
+      <FileName>Operations\DemographicRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Operations.InstitutionSymbol" Collapsed="true">
+    <Position X="22.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Operations\WmsInventoryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Operations.MaterialFormat" Collapsed="true">
+    <Position X="31.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACFAAAEACJAAQBDiUIRFiABAAQgiQCQACMAAABAAABg=</HashCode>
+      <FileName>Operations\WmsInventoryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Operations.ShelvingLocation" Collapsed="true">
+    <Position X="24.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAQBAKgAAAAMAAAAQAAAAAAAAAAFAAAAACBBFAQAgE=</HashCode>
+      <FileName>Operations\WmsInventoryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Operations.HoldingLocation" Collapsed="true">
+    <Position X="28" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Operations\WmsInventoryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Operations.CurrentStatus" Collapsed="true">
+    <Position X="33.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACQIAAAAAAIAAAACAJGAgAAAAABAIAAAAAAAAA=</HashCode>
+      <FileName>Operations\WmsInventoryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Operations.ItemType" Collapsed="true">
+    <Position X="28" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Operations\WmsInventoryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.ItemType" Collapsed="true">
+    <Position X="29.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAQABAAACAAAAAAAAgAABACAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Counter\CounterRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.IdentifierType" Collapsed="true">
+    <Position X="33.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAEAAAACQAIAAABAAAAAAAAAAQ=</HashCode>
+      <FileName>Repository\Counter\CounterRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.MetricType" Collapsed="true">
+    <Position X="33.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAgAQIADCAAAAAAAEAMAQkIAACDBAIEAAIACAAA=</HashCode>
+      <FileName>Repository\Counter\CounterRecord.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.CounterReport" Collapsed="true">
+    <Position X="31.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEFgAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Repository\Counter\CounterReport.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.ReleaseVersion" Collapsed="true">
+    <Position X="22.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Repository\Counter\ReleaseVersion.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.MetricType" Collapsed="true">
+    <Position X="35" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQABFIABIAABgIAAQAAAAAgBU6AAAIAAAAABCQQAABA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.Category" Collapsed="true">
+    <Position X="22.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.AttributeType" Collapsed="true">
+    <Position X="21" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIABAAAAAAAAAAAABAAAgAAAAAQ=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.DateType" Collapsed="true">
+    <Position X="22.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAgAAAAAAAAAAAQ=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ContributorIdentifierType" Collapsed="true">
+    <Position X="29.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.IdentifierType" Collapsed="true">
+    <Position X="35" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAYAACQAAAAAAAAAAAAAAAAAAABAAAAAAAAgAAAQ=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.DataType" Collapsed="true">
+    <Position X="36.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAQABAAACAAAAAAAAgAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.ExceptionSeverity" Collapsed="true">
+    <Position X="22.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAABAAAAAAAAAAAAAAAEAEAAA=</HashCode>
+      <FileName>Service References\Repository.Counter.Sushi_4_1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Database.SqlServerAuthenticationMethod" Collapsed="true">
+    <Position X="26.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAQAAAA=</HashCode>
+      <FileName>Repository\Database\SqlServerDatabaseRepositoryArguments.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Directory.FileCreationMode" Collapsed="true">
+    <Position X="26.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAIAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\FileCreationMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Directory.DirectoryObjectType" Collapsed="true">
+    <Position X="35" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\IDirectoryRepository.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Scheduling.DivisibleIntervalUnit" Collapsed="true">
+    <Position X="36.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAQAAAAAAAAAAAAAAAQAABAAAAAAE=</HashCode>
+      <FileName>Scheduling\DivisibleIntervalUnit.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Scheduling.IndivisibleIntervalUnit" Collapsed="true">
+    <Position X="21" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Scheduling\IndivisibleIntervalUnit.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Scheduling.IntervalUnit" Collapsed="true">
+    <Position X="24.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAQAAAAQAAAAAAAAAAAIAAEQAABAAAAAAE=</HashCode>
+      <FileName>Scheduling\IntervalUnit.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.MetricType" Collapsed="true">
+    <Position X="36.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABEIABAAABgAAABAAAAAgBUiAIAAAAAAABCAQBAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.Category" Collapsed="true">
+    <Position X="26.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAACAAAEAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.IdentifierType" Collapsed="true">
+    <Position X="31.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAYAACQAAAAAAAAAAAAAAAAAAABAAAAAAAAgAAAQ=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.DataType" Collapsed="true">
+    <Position X="35" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAABAAAAAAAAAAAAgAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.ExceptionSeverity" Collapsed="true">
+    <Position X="21" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAABAAAAAAAAAAAAAAAEAEAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_3_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.MetricType" Collapsed="true">
+    <Position X="21" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQABFIABIAABgIAAQAAAAAgBU6AAAIAAAAABCQQAABA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.Category" Collapsed="true">
+    <Position X="24.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.IdentifierType" Collapsed="true">
+    <Position X="29.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAYAACQAAAAAAAAAAAAAAAAAAABAAAAAAAAgAAAQ=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.DataType" Collapsed="true">
+    <Position X="21" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAQABAAACAAAAAAAAgAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.ExceptionSeverity" Collapsed="true">
+    <Position X="24.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAABAAAAAAAAAAAAAAAEAEAAA=</HashCode>
+      <FileName>Service References\Repository.Journal.Sushi_4_0\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

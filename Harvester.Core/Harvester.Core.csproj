@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{557393B2-F0A5-49C7-931C-FFE592C8D23F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZondervanLibrary.Harvester.Core</RootNamespace>
+    <AssemblyName>Harvester.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Harvester.Core.Documentation.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <OutputPath>bin\Production\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Production\Harvester.Core.Documentation.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\Test\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Test\Harvester.Core.Documentation.XML</DocumentationFile>
+    <Optimize>false</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.1.0\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FileHelpers, Version=3.1.5.0, Culture=neutral, PublicKeyToken=3e0c08d59cc3d657, processorArchitecture=MSIL">
+      <HintPath>..\packages\FileHelpers.3.1.5\lib\net45\FileHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlUnit, Version=2.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHtmlUnit.2.19.0\lib\net45\HtmlUnit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.AWT.WinForms, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.AWT.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Beans.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Charsets.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Cldrdata, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Cldrdata.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Corba.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Jdbc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Localedata, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Localedata.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Management.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Media.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Misc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Naming.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Nashorn, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Nashorn.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Remoting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Tools, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Tools.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Util.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.API.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Bind, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Bind.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Crypto, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Parse, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Parse.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Transform, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Transform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.WebServices, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.WebServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.XPath, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.XPath.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.JNI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ImapX, Version=2.0.0.18, Culture=neutral, PublicKeyToken=5992873d65130d1f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ImapX.2.0.0.18\lib\net45\ImapX.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHtmlUnit, Version=2.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHtmlUnit.2.19.0\lib\net45\NHtmlUnit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenPop, Version=2.0.6.1120, Culture=neutral, PublicKeyToken=6bdb97f144b7efc8, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenPop.NET.2.0.6.1120\lib\net40\OpenPop.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorHosting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleBrowser.0.5.79.0\lib\net40\RazorHosting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.0.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.0.0\lib\net40\Renci.SshNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleBrowser, Version=0.5.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleBrowser.0.5.79.0\lib\net40\SimpleBrowser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleBrowser.WebDriver, Version=0.5.37.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleBrowser.WebDriver.0.5.37\lib\net40\SimpleBrowser.WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net.FtpClient">
+      <HintPath>..\packages\System.Net.FtpClient.1.0.5281.14359\lib\net40\System.Net.FtpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encoding" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.8.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\ConfigurationExceptionCategory.cs" />
+    <Compile Include="Exceptions\ConfigurationFileException.cs" />
+    <Compile Include="Exceptions\ImplementationExceptionCategory.cs" />
+    <Compile Include="Exceptions\IOExceptionCategory.cs" />
+    <Compile Include="Exceptions\OperationException.cs" />
+    <Compile Include="Exceptions\RepositoryConfigurationException.cs" />
+    <Compile Include="Exceptions\RepositoryException.cs" />
+    <Compile Include="Exceptions\RepositoryImplementationException.cs" />
+    <Compile Include="Exceptions\RepositoryIOException.cs" />
+    <Compile Include="Operations\Demographics\DemographicRecord.cs" />
+    <Compile Include="Operations\EZProxy\EZProxyRecord.cs" />
+    <Compile Include="Operations\Counter\ImportCounterTransactionsOperation.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Operations\Counter\ImportCounterTransactionsOperationArguments.cs" />
+    <Compile Include="Operations\Demographics\ImportDemographicsOperation.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Operations\Demographics\ImportDemographicsOperationArguments.cs" />
+    <Compile Include="Operations\EZProxy\ImportEZProxyAuditOperation.cs" />
+    <Compile Include="Operations\EZProxy\ImportEZProxyAuditOperationArguments.cs" />
+    <Compile Include="Operations\EZProxy\ImportEZProxyLogOperation.cs" />
+    <Compile Include="Operations\EZProxy\ImportEZProxyLogOperationArguments.cs" />
+    <Compile Include="Operations\IOperation.cs" />
+    <Compile Include="Operations\OperationContext.cs" />
+    <Compile Include="Operations\Statista\ImportStatistaOperation.cs" />
+    <Compile Include="Operations\Statista\ImportStatistaOperationArguments.cs" />
+    <Compile Include="Operations\WmsInventory\ImportWmsInventoryOperation.cs" />
+    <Compile Include="Operations\WmsInventory\ImportWmsInventoryOperationArguments.cs" />
+    <Compile Include="Operations\WmsInventory\IWmsInventoryRecord.cs" />
+    <Compile Include="Operations\WmsInventory\WmsInventoryRecord2018.cs" />
+    <Compile Include="Operations\WmsTransactions\ImportWmsTransactionOperation.cs" />
+    <Compile Include="Operations\WmsTransactions\ImportWmsTransactionOperationArguments.cs" />
+    <Compile Include="Operations\WmsInventory\InventoryRecord.cs" />
+    <Compile Include="Operations\LexisNexisBrowser.cs" />
+    <Compile Include="Operations\OperationArgumentsBase.cs" />
+    <Compile Include="Operations\OperationBase.cs" />
+    <Compile Include="Operations\Statista\StatistaRecord.cs" />
+    <Compile Include="Operations\Sync\SyncOperation.cs" />
+    <Compile Include="Operations\Sync\SyncOperationArguments.cs" />
+    <Compile Include="Operations\WmsInventory\WmsInventoryFields.cs" />
+    <Compile Include="Operations\WmsInventory\WmsInventoryRecord.cs" />
+    <Compile Include="Operations\WmsInventory\WmsInventoryRecordDiff.cs" />
+    <Compile Include="Operations\WmsInventory\WmsInventoryRecordEdge.cs" />
+    <Compile Include="Operations\WmsTransactions\WmsTransactionRecord.cs" />
+    <Compile Include="Permissions\FilePermissions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Counter\CounterReport.cs" />
+    <Compile Include="Repository\Counter\EbscoHostCounterRepository.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Repository\Counter\EbscoHostCounterRepositoryArguments.cs" />
+    <Compile Include="Repository\Counter\ISushiCounterRepositoryArguments.cs" />
+    <Compile Include="Repository\Counter\PlatformCorrection.cs" />
+    <Compile Include="Repository\Database\IDatabaseRepository.cs" />
+    <Compile Include="Repository\Database\SqlServerDatabaseRepository.cs" />
+    <Compile Include="Repository\Database\SqlServerDatabaseRepositoryArguments.cs" />
+    <Compile Include="Repository\Counter\CounterRecord.cs" />
+    <Compile Include="Repository\Counter\DatabaseRecord.cs" />
+    <Compile Include="Repository\Counter\ISushiServiceInterfaceClient.cs" />
+    <Compile Include="Repository\Counter\JournalRecord.cs" />
+    <Compile Include="Repository\Counter\ReleaseVersion.cs" />
+    <Compile Include="Repository\Counter\SushiCounterRepository.cs" />
+    <Compile Include="Repository\Counter\SushiServiceInterfaceClient.cs" />
+    <Compile Include="Repository\Counter\SushiServiceInterfaceClientFactory.cs" />
+    <Compile Include="Repository\Email\EbscoEmailRecord.cs" />
+    <Compile Include="Repository\Email\EmailRepository.cs" />
+    <Compile Include="Repository\Email\EmailRepositoryArguments.cs" />
+    <Compile Include="Repository\RepositoryArgumentBase.cs" />
+    <Compile Include="Repository\RepositoryBase.cs" />
+    <Compile Include="Repository\RepositoryExceptionMessage.cs" />
+    <Compile Include="Repository\Directory\FileCreationMode.cs" />
+    <Compile Include="Repository\Directory\FolderDirectoryRepository.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Repository\Directory\FolderDirectoryRepositoryArguments.cs" />
+    <Compile Include="Repository\Directory\FtpDirectoryRepository.cs" />
+    <Compile Include="Repository\Directory\FtpDirectoryRepositoryArguments.cs" />
+    <Compile Include="Repository\Directory\IDirectoryRepository.cs" />
+    <Compile Include="Repository\Directory\SftpDirectoryRepository.cs" />
+    <Compile Include="Repository\Directory\SftpDirectoryRepositoryArguments.cs" />
+    <Compile Include="Repository\Counter\ICounterRepository.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\RepositoryFactory.cs" />
+    <Compile Include="Scheduling\CompoundSchedule.cs" />
+    <Compile Include="Scheduling\CompoundScheduleArguments.cs" />
+    <Compile Include="Scheduling\IntervalSchedule.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Scheduling\IntervalScheduleArguments.cs" />
+    <Compile Include="Scheduling\IntervalUnit.cs" />
+    <Compile Include="Scheduling\ISchedule.cs" />
+    <Compile Include="Scheduling\ScheduleArgumentsBase.cs" />
+    <Compile Include="Repository\Counter\IReportResponse.cs" />
+    <Compile Include="Repository\Counter\IException.cs" />
+    <Compile Include="Repository\Counter\IRequestor.cs" />
+    <Compile Include="Repository\Counter\ICustomerReference.cs" />
+    <Compile Include="Repository\Counter\IReportDefinition.cs" />
+    <Compile Include="Repository\Counter\ICounterReportResponse.cs" />
+    <Compile Include="Repository\Counter\IReportRequest.cs" />
+    <Compile Include="Repository\Counter\IReport.cs" />
+    <Compile Include="Repository\Counter\IReportItem.cs" />
+    <Compile Include="Repository\Counter\IRange.cs" />
+    <Compile Include="Repository\Counter\IReportCustomer.cs" />
+    <Compile Include="Service References\Gale\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MPSInsight\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Repository.Journal.Sushi_3_0\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Repository.Journal.Sushi_4_0\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Repository.Counter.Sushi_4_1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ScholarlyIQSushi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Harvester.Entities\Harvester.Entities.csproj">
+      <Project>{00a8cdf4-eb65-4040-85ed-85e8ff94d593}</Project>
+      <Name>Harvester.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared Library\Shared Library.csproj">
+      <Project>{8d901584-63b8-443e-9e21-e68e56b24b88}</Project>
+      <Name>Shared Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Statistics.Database\Statistics.Database.sqlproj">
+      <Project>{79b27ae9-5c3a-442f-8111-c6eab902de56}</Project>
+      <Name>Statistics.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Statistics.Entities\Statistics.Entities.csproj">
+      <Project>{34d4503d-c653-46a4-8eb4-2f8f580f97cb}</Project>
+      <Name>Statistics.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Exceptions\ExceptionDiagram.cd" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Repository\RepositoryDiagram.cd" />
+    <None Include="Service References\Gale\counter4_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Gale\counterElements4_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Gale\counter_sushi4_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Gale\sushi1_6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Gale\SushiService.wsdl" />
+    <None Include="Service References\Gale\ZondervanLibrary.Harvester.Core.Gale.CounterReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Gale\ZondervanLibrary.Harvester.Core.Gale.GetReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MPSInsight\SushiService.wsdl" />
+    <None Include="Service References\MPSInsight\SushiService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MPSInsight\SushiService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MPSInsight\SushiService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MPSInsight\SushiService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MPSInsight\ZondervanLibrary.Harvester.Core.MPSInsight.CounterReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MPSInsight\ZondervanLibrary.Harvester.Core.MPSInsight.GetReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Repository.Counter.Sushi_4_1\ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.CounterReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Repository.Counter.Sushi_4_1\ZondervanLibrary.Harvester.Core.Repository.Counter.Sushi_4_1.GetReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Repository.Journal.Sushi_3_0\counter3_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Repository.Journal.Sushi_3_0\counterElements3_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Repository.Journal.Sushi_3_0\counter_sushi3_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Repository.Journal.Sushi_3_0\sushi1_6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Repository.Journal.Sushi_3_0\SushiService.wsdl" />
+    <None Include="Service References\Repository.Journal.Sushi_3_0\ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.CounterReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Repository.Journal.Sushi_3_0\ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.GetReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Repository.Journal.Sushi_4_0\counter4_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Repository.Journal.Sushi_4_0\counterElements4_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Repository.Journal.Sushi_4_0\counter_sushi4_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Repository.Journal.Sushi_4_0\sushi1_6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Repository.Journal.Sushi_4_0\SushiService.wsdl" />
+    <None Include="Service References\Repository.Counter.Sushi_4_1\counter4_1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Repository.Counter.Sushi_4_1\counterElements4_1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Repository.Counter.Sushi_4_1\counter_sushi4_1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Repository.Counter.Sushi_4_1\sushi1_7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Repository.Counter.Sushi_4_1\SushiService.wsdl" />
+    <None Include="Service References\Repository.Journal.Sushi_4_0\ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.CounterReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Repository.Journal.Sushi_4_0\ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_4_0.GetReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ScholarlyIQSushi\SushiService.wsdl" />
+    <None Include="Service References\ScholarlyIQSushi\SushiService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ScholarlyIQSushi\SushiService1.wsdl" />
+    <None Include="Service References\ScholarlyIQSushi\SushiService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ScholarlyIQSushi\SushiService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ScholarlyIQSushi\ZondervanLibrary.Harvester.Core.ScholarlyIQSushi.CounterReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ScholarlyIQSushi\ZondervanLibrary.Harvester.Core.ScholarlyIQSushi.GetReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Gale\" />
+    <WCFMetadataStorage Include="Service References\MPSInsight\" />
+    <WCFMetadataStorage Include="Service References\Repository.Journal.Sushi_3_0\" />
+    <WCFMetadataStorage Include="Service References\Repository.Journal.Sushi_4_0\" />
+    <WCFMetadataStorage Include="Service References\Repository.Counter.Sushi_4_1\" />
+    <WCFMetadataStorage Include="Service References\ScholarlyIQSushi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Repository.Journal.Sushi_3_0\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Repository.Journal.Sushi_3_0\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Repository.Journal.Sushi_3_0\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Repository.Journal.Sushi_4_0\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Repository.Journal.Sushi_4_0\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Repository.Journal.Sushi_4_0\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Repository.Counter.Sushi_4_1\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Repository.Counter.Sushi_4_1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Repository.Counter.Sushi_4_1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ScholarlyIQSushi\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ScholarlyIQSushi\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ScholarlyIQSushi\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MPSInsight\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MPSInsight\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MPSInsight\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Gale\configuration91.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Gale\configuration.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Gale\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Statistics" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ZON05-800H\LIBRARYSRVLOCAL;Initial Catalog=Statistics;Integrated Security=True" SettingsObjectName="ZondervanLibrary.SharedLibrary.Properties.Settings" SettingsPropertyName="StatisticsConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="Journals.Journals" Member="Journals">
+    <Type Name="Journal">
+      <Column Name="JournalID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JournalName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PrintISSN" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="OnlineISSN" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Association Name="Journal_JournalRecord" Member="JournalRecords" ThisKey="JournalID" OtherKey="JournalID" Type="JournalRecord" />
+    </Type>
+  </Table>
+  <Table Name="Journals.JournalRecords" Member="JournalRecords">
+    <Type Name="JournalRecord">
+      <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DatabaseID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="JournalID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RunDate" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullText" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="Journal_JournalRecord" Member="Journal" ThisKey="JournalID" OtherKey="JournalID" Type="Journal" IsForeignKey="true" />
+      <Association Name="Database_JournalRecord" Member="Database" ThisKey="DatabaseID" OtherKey="DatabaseID" Type="Database" IsForeignKey="true" />
+      <Association Name="Vendor_JournalRecord" Member="Vendor" ThisKey="VendorID" OtherKey="VendorId" Type="Vendor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Journals.Databases" Member="Databases">
+    <Type Name="Database">
+      <Column Name="DatabaseID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DatabaseName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Database_JournalRecord" Member="JournalRecords" ThisKey="DatabaseID" OtherKey="DatabaseID" Type="JournalRecord" />
+      <Association Name="Database_DatabaseRecord" Member="DatabaseRecords" ThisKey="DatabaseID" OtherKey="DatabaseID" Type="DatabaseRecord" />
+    </Type>
+  </Table>
+  <Table Name="Journals.DatabaseRecords" Member="DatabaseRecords">
+    <Type Name="DatabaseRecord">
+      <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DatabaseID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RunDate" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Searches" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResultClicks" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RecordViews" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FullText" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="Database_DatabaseRecord" Member="Database" ThisKey="DatabaseID" OtherKey="DatabaseID" Type="Database" IsForeignKey="true" />
+      <Association Name="Vendor_DatabaseRecord" Member="Vendor" ThisKey="VendorID" OtherKey="VendorId" Type="Vendor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Journals.VendorRecords" Member="VendorRecords">
+    <Type Name="VendorRecord">
+      <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RunDate" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Searches" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResultClicks" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RecordViews" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FullText" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="Vendor_VendorRecord" Member="Vendor" ThisKey="VendorID" OtherKey="VendorId" Type="Vendor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Journals.Vendors" Member="Vendors">
+    <Type Name="Vendor">
+      <Column Name="VendorId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VendorName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Vendor_JournalRecord" Member="JournalRecords" ThisKey="VendorId" OtherKey="VendorID" Type="JournalRecord" />
+      <Association Name="Vendor_DatabaseRecord" Member="DatabaseRecords" ThisKey="VendorId" OtherKey="VendorID" Type="DatabaseRecord" />
+      <Association Name="Vendor_VendorRecord" Member="VendorRecords" ThisKey="VendorId" OtherKey="VendorID" Type="VendorRecord" />
+    </Type>
+  </Table>
+</Database>

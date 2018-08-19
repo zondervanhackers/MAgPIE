@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:sc="http://www.niso.org/schemas/sushi/counter" xmlns:s="http://www.niso.org/schemas/sushi" xmlns:c="http://www.niso.org/schemas/counter" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.niso.org/schemas/sushi/counter" version="4.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="counter4_1.xsd" namespace="http://www.niso.org/schemas/counter" />
+  <xs:import schemaLocation="sushi1_7.xsd" namespace="http://www.niso.org/schemas/sushi" />
+  <xs:element name="ReportResponse" type="sc:CounterReportResponse">
+    <xs:annotation>
+      <xs:documentation>The report response for COUNTER reports (CounterReportResponse).</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ReportRequest" type="s:ReportRequest">
+    <xs:annotation>
+      <xs:documentation>Request from SUSHI Client requesting a COUNTER report.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="CounterReportResponse">
+    <xs:annotation>
+      <xs:documentation>This is the actual response expected from a COUNTER_SUSHI service. A combination of the SUSHI ReportResponse with the COUNTER "Report" added. NOTE: The ReportRequest and ReportResponse are defined in the SUSHI1_7.xsd and the COUNTER report is defined in the Counter4_1.xsd.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="s:ReportResponse">
+        <xs:sequence>
+          <xs:element name="Report" nillable="true" type="c:Reports">
+            <xs:annotation>
+              <xs:documentation>This represents the payload of the ReportResponsen by referencing the "Reports" element in the COUNTER schema.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

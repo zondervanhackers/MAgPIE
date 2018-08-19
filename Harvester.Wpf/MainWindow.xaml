@@ -1,0 +1,32 @@
+﻿<controls:MetroWindow x:Class="ZondervanLibrary.Harvester.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:command="clr-namespace:ZondervanLibrary.Harvester.Wpf.Command"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls" ShowIconOnTitleBar="False"
+        Title="Harvester - Zondervan Library" Height="350" Width="525" TitleCaps="False" ResizeMode="CanResizeWithGrip" TextOptions.TextFormattingMode="Display"
+        Icon="Images/Logo.ico"
+        GlowBrush="{DynamicResource AccentColorBrush}">
+    <controls:MetroWindow.Resources>
+        <command:DelegateCommand x:Key="CreateRepositoryProvider" Execute="CreateRepositoryProvider" />
+    </controls:MetroWindow.Resources>
+
+    <DockPanel>
+        <Menu IsMainMenu="True" Height="28" DockPanel.Dock="Top" Background="{DynamicResource AccentColorBrush3}" FontSize="13" TextOptions.TextFormattingMode="Display" >
+            <MenuItem Header="_File" Background="Transparent">
+                <MenuItem Header="_New">
+                    <MenuItem Header="Repository Provider" Command="{StaticResource CreateRepositoryProvider}" />
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Edit" Background="Transparent"/>
+            <MenuItem Header="_Help" Background="Transparent">
+                <MenuItem Header="_About..." />
+            </MenuItem>
+        </Menu>
+        
+        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="Images/Logo.png" Stretch="None" Opacity="0.15" />
+            </StackPanel.Background>
+        </StackPanel>
+    </DockPanel>
+</controls:MetroWindow>

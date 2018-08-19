@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bd0ac76d-8b19-4649-9cc5-55f5373f7485" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.niso.org/schemas/sushi/counter_sushi3_0.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="sushi1_6.xsd" MetadataType="Schema" ID="0639c134-d4ac-4873-8fea-244451fcccf3" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/sushi1_6.xsd" />
+    <MetadataFile FileName="counter3_0.xsd" MetadataType="Schema" ID="55705592-1497-4910-bdab-d195188642c8" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/counter3_0.xsd" />
+    <MetadataFile FileName="counter_sushi3_0.xsd" MetadataType="Schema" ID="92846767-ea9e-4c48-91b7-4895052ef8ea" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/counter_sushi3_0.xsd" />
+    <MetadataFile FileName="SushiService.wsdl" MetadataType="Wsdl" ID="2c4688d8-ec8b-4675-9eb3-67482e768b99" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/counter_sushi3_0.wsdl" />
+    <MetadataFile FileName="counterElements3_0.xsd" MetadataType="Schema" ID="78197fe1-d61b-4dbd-84a2-44059b5c5f26" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/counterElements3_0.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

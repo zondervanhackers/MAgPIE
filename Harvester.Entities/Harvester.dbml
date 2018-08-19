@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Harvester" Class="HarvesterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ZON05-800H\LIBRARYSRVLOCAL;Initial Catalog=Harvester;Integrated Security=True" SettingsObjectName="ZondervanLibrary.Harvester.Entities.Properties.Settings" SettingsPropertyName="HarvesterConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="Persistance.Repositories" Member="Repositories">
+    <Type Name="Repository">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Repository_DirectoryRecord" Member="DirectoryRecords" ThisKey="ID" OtherKey="RepositoryID" Type="DirectoryRecord" />
+      <Association Name="Repository_CounterOperationRecord" Member="CounterOperationRecords" ThisKey="ID" OtherKey="RepositoryID" Type="CounterOperationRecord" />
+    </Type>
+  </Table>
+  <Table Name="Persistance.DirectoryRecords" Member="DirectoryRecords">
+    <Type Name="DirectoryRecord">
+      <Column Name="OperationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RepositoryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FilePath" Type="System.String" DbType="NVarChar(1024) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FileModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="Repository_DirectoryRecord" Member="Repository" ThisKey="RepositoryID" OtherKey="ID" Type="Repository" IsForeignKey="true" />
+      <Association Name="Operation_DirectoryRecord" Member="Operation" ThisKey="OperationID" OtherKey="ID" Type="Operation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Persistance.OperationRecords" Member="OperationRecords">
+    <Type Name="OperationRecord">
+      <Column Name="OperationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RunDate" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExecutedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Operation_OperationRecord" Member="Operation" ThisKey="OperationID" OtherKey="ID" Type="Operation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Persistance.Operations" Member="Operations">
+    <Type Name="Operation">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Operation_DirectoryRecord" Member="DirectoryRecords" ThisKey="ID" OtherKey="OperationID" Type="DirectoryRecord" />
+      <Association Name="Operation_OperationRecord" Member="OperationRecords" ThisKey="ID" OtherKey="OperationID" Type="OperationRecord" />
+      <Association Name="Operation_CounterOperationRecord" Member="CounterOperationRecords" ThisKey="ID" OtherKey="OperationID" Type="CounterOperationRecord" />
+    </Type>
+  </Table>
+  <Table Name="Persistance.CounterOperationRecords" Member="CounterOperationRecords">
+    <Type Name="CounterOperationRecord">
+      <Column Name="OperationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RepositoryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RunDate" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Report" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExecutedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Operation_CounterOperationRecord" Member="Operation" ThisKey="OperationID" OtherKey="ID" Type="Operation" IsForeignKey="true" />
+      <Association Name="Repository_CounterOperationRecord" Member="Repository" ThisKey="RepositoryID" OtherKey="ID" Type="Repository" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

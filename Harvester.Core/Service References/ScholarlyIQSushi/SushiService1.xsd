@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.niso.org/schemas/sushi/counter" elementFormDefault="qualified" targetNamespace="http://www.niso.org/schemas/sushi/counter" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://sushi4.scholarlyiq.com/SushiService.svc?xsd=xsd1" namespace="http://www.niso.org/schemas/sushi" />
+  <xs:import schemaLocation="http://sushi4.scholarlyiq.com/SushiService.svc?xsd=xsd2" namespace="http://www.niso.org/schemas/counter" />
+  <xs:element xmlns:q1="http://www.niso.org/schemas/sushi" name="ReportRequest" type="q1:ReportRequest" />
+  <xs:element name="ReportResponse" type="tns:CounterReportResponse" />
+  <xs:complexType name="CounterReportResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://www.niso.org/schemas/sushi" base="q2:ReportResponse">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://www.niso.org/schemas/counter" minOccurs="1" maxOccurs="1" name="Report" nillable="true" type="q3:ArrayOfReport" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

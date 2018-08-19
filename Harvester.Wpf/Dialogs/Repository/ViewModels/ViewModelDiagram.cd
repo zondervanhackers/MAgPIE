@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ZondervanLibrary.Harvester.Wpf.Dialogs.Repository.ViewModels.FileDirectoryRepositoryViewModel" Collapsed="true">
+    <Position X="4" Y="3" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Dialogs\Repository\ViewModels\FileDirectoryRepositoryViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Wpf.Dialogs.Repository.ViewModels.FtpDirectoryRepositoryViewModel" Collapsed="true">
+    <Position X="4" Y="4" Width="3" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAAAAAAAgAAQAAAAQACAAACAACAAIABAAAAEA=</HashCode>
+      <FileName>Dialogs\Repository\ViewModels\FtpDirectoryRepositoryViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Wpf.Dialogs.Repository.ViewModels.SqlServerDatabaseRepositoryViewModel" Collapsed="true">
+    <Position X="7.25" Y="3" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dialogs\Repository\ViewModels\SqlServerDatabaseRepositoryViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Wpf.Dialogs.Repository.ViewModels.SftpDirectoryRepositoryViewModel" Collapsed="true">
+    <Position X="4" Y="5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAgAAgAAQAAAAQACAAACAACAAIABAAAAAA=</HashCode>
+      <FileName>Dialogs\Repository\ViewModels\SftpDirectoryRepositoryViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Wpf.Dialogs.Repository.ViewModels.SushiJournalRepositoryViewModel" Collapsed="true">
+    <Position X="1" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dialogs\Repository\ViewModels\SushiJournalRepositoryViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ZondervanLibrary.Harvester.Wpf.Dialogs.Repository.ViewModels.IRepositoryViewModel" Collapsed="true">
+    <Position X="4" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dialogs\Repository\ViewModels\IRepositoryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Wpf.Dialogs.Repository.ViewModels.IJournalRepositoryViewModel" Collapsed="true">
+    <Position X="1" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dialogs\Repository\ViewModels\IJournalRepositoryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Wpf.Dialogs.Repository.ViewModels.IDirectoryRepositoryViewModel" Collapsed="true">
+    <Position X="4" Y="2" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dialogs\Repository\ViewModels\IDirectoryRepositoryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Wpf.Dialogs.Repository.ViewModels.IDatabaseRepositoryViewModel" Collapsed="true">
+    <Position X="7.25" Y="2" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dialogs\Repository\ViewModels\IDatabaseRepositoryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

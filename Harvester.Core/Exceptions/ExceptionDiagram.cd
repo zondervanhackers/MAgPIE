@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryException">
+    <Position X="5" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryConfigurationException">
+    <Position X="0.5" Y="2.75" Width="3.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryConfigurationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryIOException">
+    <Position X="4.5" Y="2.75" Width="3.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryIOException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryImplementationException">
+    <Position X="8.5" Y="2.75" Width="3.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryException" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="1.992" />
+        <Point X="6.25" Y="2.375" />
+        <Point X="10.25" Y="2.375" />
+        <Point X="10.25" Y="2.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryImplementationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryFileExistsConfigurationException" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryFileExistsConfigurationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryFileNotFoundConfigurationException" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryFileNotFoundConfigurationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryAuthenticationConfigurationException" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryAuthenticationConfigurationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryFileLockedConfigurationException" Collapsed="true">
+    <Position X="0.5" Y="7" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryFileLockedConfigurationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryNetworkUnavailableIOException" Collapsed="true">
+    <Position X="4.5" Y="4.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryNetworkUnavailableIOException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryUnrecognizedExceptionImplementationException" Collapsed="true">
+    <Position X="8.5" Y="4.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryUnrecognizedExceptionImplementationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryUnauthorizedAccessConfigurationException" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryUnauthorizedAccessConfigurationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryFileFormatInvalidConfigurationException" Collapsed="true">
+    <Position X="0.5" Y="8.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryFileFormatInvalidConfigurationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryGeneralIOException" Collapsed="true">
+    <Position X="4.5" Y="5.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryGeneralIOException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Exceptions.RepositoryUnrecognizedProtocolImplementationException" Collapsed="true">
+    <Position X="8.5" Y="5.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\RepositoryUnrecognizedProtocolImplementationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

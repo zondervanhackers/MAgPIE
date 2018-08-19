@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e9c02084-d425-4bf0-9800-1248e6dc24a5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://sushi4.scholarlyiq.com/sushiservice.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SushiService.xsd" MetadataType="Schema" ID="fc1ef7bc-1982-4ecd-9859-14a7a5d6b79f" SourceId="1" SourceUrl="http://sushi4.scholarlyiq.com/SushiService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SushiService1.xsd" MetadataType="Schema" ID="7b782288-7ba1-453f-ae6d-a9e5f0c493c5" SourceId="1" SourceUrl="http://sushi4.scholarlyiq.com/SushiService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SushiService2.xsd" MetadataType="Schema" ID="a22b9630-99f5-4d91-8fa7-4903cd9e22f1" SourceId="1" SourceUrl="http://sushi4.scholarlyiq.com/SushiService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SushiService.wsdl" MetadataType="Wsdl" ID="0682953b-6a9a-47b3-bf18-9be521ff017a" SourceId="1" SourceUrl="http://sushi4.scholarlyiq.com/SushiService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SushiService1.wsdl" MetadataType="Wsdl" ID="f5f31b67-8566-48ea-8401-89f63cd47fb9" SourceId="1" SourceUrl="http://sushi4.scholarlyiq.com/sushiservice.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

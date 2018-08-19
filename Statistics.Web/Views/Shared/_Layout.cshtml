@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>@ViewBag.Title</title>
+
+        @Styles.Render("~/assets/styles/layout.less")
+        @RenderSection("Styles", false)
+
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Ensure footer is at bottom of page.
+                $(window).resize(function () {
+                    var difference = $(window).height() - $("body").height() + $("#buffer").height();
+                    $("#buffer").height(Math.max(0, difference));
+                });
+
+                $(window).resize();
+
+                $("#nav-main, #nav-secondary").click(function () {
+                    if ($(body).width() < 800) {
+                        $(this).find("ul").slideToggle();
+                    }
+                });
+            });
+        </script>
+
+        @RenderSection("Scripts", false)
+    </head>
+    <body>
+        <header id="header">
+            <a id="logo" href="http://library.taylor.edu/"></a>
+            <div id="title">
+                <div class="host">Taylor University</div>
+                <div class="subtitle">@ViewBag.Title</div>
+            </div>
+            <section id="nav">
+                <nav id="nav-main">
+                    <span class="name"><!--<a href="http://www.taylor.edu/" class="title-link">-->Taylor University<!--</a>--></span>
+                    <span class="wrapper"> : </span>
+                    <ul class="menu">
+                        <li><a href="http://www.taylor.edu/admissions/">Admissions</a></li>
+                        <li><a href="http://www.taylor.edu/academics/">Academics</a></li>
+                        <li><a href="http://www.taylor.edu/student-life/">Student Life</a></li>
+                        <li><a href="http://www.taylor.edu/about/">About</a></li>
+                    </ul>
+                </nav>
+                <nav id="nav-secondary">
+                    <span class="name"><!--<a href="http://library.taylor.edu/" class="title-link">-->Zondervan Library<!--</a>--></span>
+                    <span class="wrapper"> : </span>
+                    <ul class="menu">
+                        <li><a href="http://library.taylor.edu/about-the-library/">About the Library</a></li>
+                        <li><a href="http://library.taylor.edu/subjects/">Resources Online</a></li>
+                        <li><a href="http://research.zondervanlibrary.org/">Research Guides</a></li>
+                        <li><a href="http://library.taylor.edu/about-the-library/ask.shtml">Ask-a-Librarian</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <div class="clear"></div>
+        </header>
+        <div id="body">
+            <div class="center-wrapper">
+                <div class="sub-header">
+                    <header class="title">@ViewBag.Title</header>
+                    <nav class="nav">
+                        <ul>
+                            <li class="@ViewContext.IsActiveController("Yearbook")"><a href="@Url.Action("Index", "Yearbook")">Yearbooks</a></li>
+                            <li class="@ViewContext.IsActiveController("AcademicCatalog")"><a href="@Url.Action("Index", "AcademicCatalog")">Academic Catalogs</a></li>
+                            <li class="@ViewContext.IsActiveController("AlumniMagazine")"><a href="@Url.Action("Index", "AlumniMagazine")">Alumni Magazines</a></li>
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+                <div class="content-wrapper">
+                    <div class="content">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+            <div id="buffer" style="height: 0px;"></div>
+        </div>
+        <footer id="footer">
+            <div class="center-wrapper">
+                <div>&copy; 1994-@DateTime.Now.Year Taylor University</div>
+                <div>236 West Reade Ave.</div>
+                <div>Upland, IN 46989</div>
+                <div>(800) 882-3456</div>
+            </div>
+        </footer>
+    </body>
+</html>
+

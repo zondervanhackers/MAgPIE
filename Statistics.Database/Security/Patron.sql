@@ -1,0 +1,2 @@
+﻿CREATE SCHEMA [Patron]
+    AUTHORIZATION [dbo];

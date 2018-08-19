@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConfigurationSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Notification>
+    <SystemEmailAccount>
+      <UserName>[Insert Username Here]</UserName>
+      <Password>[Insert Password Here]</Password>
+    </SystemEmailAccount>
+    <DeveloperEmails>
+      <Email>[Insert Email Here]</Email>
+    </DeveloperEmails>
+    <UserEmails>
+	  <Email>[Insert Email Here]</Email>
+    </UserEmails>
+  </Notification>
+  <Repositories>
+    <Repository xsi:type="SqlServerDatabase">
+      <Name>[DatabaseName]</Name>
+      <Server>[ServerName]</Server>
+      <Database>[DatabaseName]</Database>
+      <Authentication>[Windows]</Authentication>
+    </Repository>
+	<Repository xsi:type="SqlServerDatabase">
+	  <Name>[DatabaseName]</Name>
+	  <Server>[ServerName]</Server>
+	  <Database>[DatabaseName]</Database>
+	  <Authentication>[UsernamePassword]</Authentication>
+	  <Username>[Username]</Username>
+	  <Password>[Password]</Password>
+	</Repository>
+	<Repository xsi:type="FolderDirectory">
+	  <Name>[DirectoryTitle]</Name>
+	  <Path>[C:\Directory\]</Path>
+	</Repository>
+	<Repository xsi:type="FtpDirectory">
+	  <Name>[Name]</Name>
+	  <Host>[FtpHost]</Host>
+	  <Port>[PortNumber]</Port>
+	  <Username>[Username]</Username>
+	  <Password>[Password]</Password>
+	  <UseSsl>[false or true]</UseSsl>
+	</Repository>
+	<Repository xsi:type="SftpDirectory">
+	  <Name>[Name]</Name>
+	  <Host>[SftpHost]</Host>
+	  <Port>[PortNumber]</Port>
+	  <Username>[Username]</Username>
+	  <Password>[Password]</Password>
+	  <DirectoryPath>[File path in sftp space to look for files. "folder/location/place"]</DirectoryPath>
+	</Repository>
+	<Repository xsi:type="SushiCounter">
+	  <Name>[VendorName]</Name>
+	  <Url>[http://]</Url>
+	  <RequestorID>[RequestorID]</RequestorID>
+	  <CustomerID>[CustomerID]</CustomerID>
+	  <ReleaseVersion>[Insert 'R4' or 'R3']</ReleaseVersion>
+	  <AvailableReports>
+		<CounterReport>[JR1]</CounterReport>
+		<CounterReport>[PR1]</CounterReport>
+	  </AvailableReports>
+	</Repository>
+	<Repository xsi:type="EbscoHostCounter">
+	  <Name>EbscoHost</Name>
+	  <Username>[Username]</Username>
+	  <Password>[Password]</Password>
+	  <Sushi>
+		<Url>[http://]</Url>
+		<RequestorID>[RequestorID]</RequestorID>
+		<CustomerID>[CustomerID]</CustomerID>
+		<ReleaseVersion>[Insert 'R4' or 'R3']</ReleaseVersion>
+		<AvailableReports>
+		  <CounterReport>[JR1]</CounterReport>
+		</AvailableReports>
+	  </Sushi>
+	</Repository>
+  </Repositories>
+  <Operations>
+    <Operation xsi:type="ImportCounterTransactions">
+      <Name>[VendorImport]</Name>
+      <Schedules>
+        <Schedule xsi:type="IntervalSchedule" Interval="31" Unit="Days" StartDate="2014-01-01T00:00:00" EndDate="2016-01-01T00:00:00" />
+      </Schedules>
+      <SourceCounter>[Repository]</SourceCounter>
+      <DestinationDatabase>[Repository]</DestinationDatabase>
+      <MaxRunsDaily>0</MaxRunsDaily>
+	</Operation>
+	<Operation xsi:type="ImportDemographics">
+	  <Name>[DemographicImport]</Name>
+	  <Schedules>
+		<Schedule xsi:type="IntervalSchedule" Interval="7" Unit="Weeks" StartDate="2016-02-01T00:00:00" />
+	  </Schedules>
+	  <SourceDirectory>[Repository]</SourceDirectory>
+	  <DestinationDatabase>[DatabaseRepository]</DestinationDatabase>
+	  <HarvesterDatabase>[DatabaseRepository]</HarvesterDatabase>
+	</Operation>
+	<Operation xsi:type="ImportWmsInventory">
+	  <Name>[WmsInventoryImport]</Name>
+	  <Schedules>
+		<Schedule xsi:type="IntervalSchedule" Interval="7" Unit="Days" StartDate="2016-02-01T00:00:00" />
+	  </Schedules> 
+	  <SourceDirectory>[Repository]</SourceDirectory>
+	  <DestinationDatabase>[DatabaseRepository]</DestinationDatabase>
+	  <HarvesterDatabase>[DatabaseRepository]</HarvesterDatabase>
+	</Operation>
+	<Operation xsi:type="ImportWmsTransaction">
+	  <Name>[WmsTransactionImport]</Name>
+	  <Schedules>
+		<Schedule xsi:type="IntervalSchedule" Interval="1" Unit="Days" StartDate="2016-02-01T00:00:00" />
+	  </Schedules>
+	  <SourceDirectory>[Repository]</SourceDirectory>
+	  <DestinationDatabase>[DatabaseRepository]</DestinationDatabase>
+	  <HarvesterDatabase>[DatabaseRepository]</HarvesterDatabase>
+	</Operation>
+	<Operation xsi:type="Sync">
+	  <Name>[SyncDirectories]</Name>
+	  <Schedules>
+		<Schedule xsi:type="IntervalSchedule" Interval="7" Unit="Weeks" StartDate="2016-02-01T00:00:00" />
+	  </Schedules>
+	  <SourceDirectory>[Repository]</SourceDirectory>
+	  <DestinationDirectory>[Repository]</DestinationDirectory>
+	  <FilePattern>[Regular Expression]</FilePattern>
+	</Operation>
+  </Operations>
+</ConfigurationSettings>

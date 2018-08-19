@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Statistics" Class="StatisticsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ZON05-800H\LIBRARYSRVLOCAL;Initial Catalog=Statistics;Integrated Security=True" SettingsObjectName="ZondervanLibrary.Statistics.Entities.Properties.Settings" SettingsPropertyName="StatisticsConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="Circulation.BibliographicRecords" Member="BibliographicRecords">
+    <Type Name="BibliographicRecord">
+      <Column Name="BibliographicRecordID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OclcNumber" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="MaterialFormat" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RunDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="BibliographicRecord_Item" Member="Items" ThisKey="BibliographicRecordID" OtherKey="BibliographicRecordID" Type="Item" />
+    </Type>
+  </Table>
+  <Table Name="Statista.StatisticaRecords" Member="StatisticaRecords">
+    <Type Name="StatisticaRecord">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime2 NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ContentType" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="MainIndustry" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TypeofAccess" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Subtype" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Circulation.InventoryAnomalies" Member="InventoryAnomalies">
+    <Type Name="InventoryAnomaly">
+      <Column Name="OclcNumber" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaterialFormat" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Barcode" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="Cost" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="LastInventoriedDate" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="DeletedDate" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ItemType" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="CallNumber" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="ShelvingLocation" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="CurrentStatus" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RunDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CountFound" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Circulation.ItemLocationDates" Member="ItemLocationDates">
+    <Type Name="ItemLocationDate">
+      <Column Name="ItemLocationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RunDate" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="ItemLocation_ItemLocationDate" Member="ItemLocation" ThisKey="ItemLocationID" OtherKey="ItemLocationID" Type="ItemLocation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Circulation.ItemLocations" Member="ItemLocations">
+    <Type Name="ItemLocation">
+      <Column Name="ItemLocationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CallNumber" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="ShelvingLocation" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="CurrentStatus" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="ItemLocation_ItemLocationDate" Member="ItemLocationDates" ThisKey="ItemLocationID" OtherKey="ItemLocationID" Type="ItemLocationDate" />
+      <Association Name="ItemLocation_ItemTransaction" Member="ItemTransactions" ThisKey="ItemLocationID" OtherKey="ItemLocationID" Type="ItemTransaction" />
+      <Association Name="Item_ItemLocation" Member="Item" ThisKey="ItemID" OtherKey="ItemID" Type="Item" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Circulation.Items" Member="Items">
+    <Type Name="Item">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BibliographicRecordID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Barcode" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="Cost" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LastInventoriedDate" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="DeletedDate" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ItemType" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="RunDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="Item_ItemLocation" Member="ItemLocations" ThisKey="ItemID" OtherKey="ItemID" Type="ItemLocation" />
+      <Association Name="BibliographicRecord_Item" Member="BibliographicRecord" ThisKey="BibliographicRecordID" OtherKey="BibliographicRecordID" Type="BibliographicRecord" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Circulation.ItemTransactions" Member="ItemTransactions">
+    <Type Name="ItemTransaction">
+      <Column Name="ItemTransactionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemBarcode" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="PatronDemographicID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemLocationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TransactionType" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="UserBarcode" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="LoanDueDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LoanCheckedOutDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="InstitutionName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RunDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="RecordDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="ItemLocation_ItemTransaction" Member="ItemLocation" ThisKey="ItemLocationID" OtherKey="ItemLocationID" Type="ItemLocation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Circulation.TransactionAnomalies" Member="TransactionAnomalies">
+    <Type Name="TransactionAnomaly">
+      <Column Name="ItemBarcode" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="UserBarcode" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="LoanDueDate" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LoanCheckedOutDate" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="RecordDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionType" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="InstitutionName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CountFound" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="RunDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Digital.ResourceIdentifiers" Member="ResourceIdentifiers">
+    <Type Name="ResourceIdentifier">
+      <Column Name="ResourceId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdentifierType" Type="System.String" DbType="VarChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdentifierValue" Type="System.String" DbType="NVarChar(64) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ResourceType" Type="System.String" DbType="VarChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="Resource_ResourceIdentifier" Member="Resource" ThisKey="ResourceId" OtherKey="ResourceId" Type="Resource" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Digital.ResourceRecordMetrics" Member="ResourceRecordMetrics">
+    <Type Name="ResourceRecordMetric">
+      <Column Name="ResourceRecordId" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MetricType" Type="System.String" DbType="VarChar(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MetricValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ResourceRecord_ResourceRecordMetric" Member="ResourceRecord" ThisKey="ResourceRecordId" OtherKey="ResourceRecordId" Type="ResourceRecord" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Digital.ResourceRecords" Member="ResourceRecords">
+    <Type Name="ResourceRecord">
+      <Column Name="ResourceRecordId" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ParentResourceRecordId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ResourceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RunDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="ResourceRecord_ResourceRecordMetric" Member="ResourceRecordMetrics" ThisKey="ResourceRecordId" OtherKey="ResourceRecordId" Type="ResourceRecordMetric" />
+      <Association Name="Resource_ResourceRecord" Member="Resource" ThisKey="ResourceId" OtherKey="ResourceId" Type="Resource" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Digital.Resources" Member="Resources">
+    <Type Name="Resource">
+      <Column Name="ResourceId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ResourceName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceType" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="ResourcePlatform" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="Resource_ResourceIdentifier" Member="ResourceIdentifiers" ThisKey="ResourceId" OtherKey="ResourceId" Type="ResourceIdentifier" />
+      <Association Name="Resource_ResourceRecord" Member="ResourceRecords" ThisKey="ResourceId" OtherKey="ResourceId" Type="ResourceRecord" />
+    </Type>
+  </Table>
+  <Table Name="EZProxy.EZProxyAudit" Member="EZProxyAudits">
+    <Type Name="EZProxyAudit">
+      <Column Name="DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Event" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Session" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Other" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="LineNumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="EZProxy.EZProxyLog" Member="EZProxyLogs">
+    <Type Name="EZProxyLog">
+      <Column Name="IP" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Request" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="HTTPCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BytesTransferred" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Referer" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserAgent" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Patron.PatronRecords" Member="PatronRecords">
+    <Type Name="PatronRecord">
+      <Column Name="PatronRecordId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PatronId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EffectiveStartDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="EffectiveEndDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="PatronRecord_StudentRecord" Member="StudentRecords" ThisKey="PatronRecordId" OtherKey="PatronRecordId" Type="StudentRecord" />
+      <Association Name="Patron_PatronRecord" Member="Patron" ThisKey="PatronId" OtherKey="PatronId" Type="Patron" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Patron.Patrons" Member="Patrons">
+    <Type Name="Patron">
+      <Column Name="PatronId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Barcode" Type="System.String" DbType="Char(14) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="Patron_PatronRecord" Member="PatronRecords" ThisKey="PatronId" OtherKey="PatronId" Type="PatronRecord" />
+    </Type>
+  </Table>
+  <Table Name="Patron.StudentMajorRecords" Member="StudentMajorRecords">
+    <Type Name="StudentMajorRecord">
+      <Column Name="StudentRecordId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MajorType" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StudentMajorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="StudentMajor_StudentMajorRecord" Member="StudentMajor" ThisKey="StudentMajorId" OtherKey="StudentMajorId" Type="StudentMajor" IsForeignKey="true" />
+      <Association Name="StudentRecord_StudentMajorRecord" Member="StudentRecord" ThisKey="StudentRecordId" OtherKey="StudentRecordId" Type="StudentRecord" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Patron.StudentMajors" Member="StudentMajors">
+    <Type Name="StudentMajor">
+      <Column Name="StudentMajorId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MajorName" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="MajorCode" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="IsSystems" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsEducation" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsGraduate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="StudentMajor_StudentMajorRecord" Member="StudentMajorRecords" ThisKey="StudentMajorId" OtherKey="StudentMajorId" Type="StudentMajorRecord" />
+    </Type>
+  </Table>
+  <Table Name="Patron.StudentRecords" Member="StudentRecords">
+    <Type Name="StudentRecord">
+      <Column Name="StudentRecordId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PatronRecordId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StudentLevel" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="StudentType" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="StudentClass" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="CumulativeGpa" Type="System.Decimal" DbType="Decimal(3,2)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="StudentRecord_StudentMajorRecord" Member="StudentMajorRecords" ThisKey="StudentRecordId" OtherKey="StudentRecordId" Type="StudentMajorRecord" />
+      <Association Name="StudentRecord_StudentResidenceRecord" Member="StudentResidenceRecord" ThisKey="StudentRecordId" OtherKey="StudentRecordId" Type="StudentResidenceRecord" Cardinality="One" />
+      <Association Name="PatronRecord_StudentRecord" Member="PatronRecord" ThisKey="PatronRecordId" OtherKey="PatronRecordId" Type="PatronRecord" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Patron.StudentResidenceRecords" Member="StudentResidenceRecords">
+    <Type Name="StudentResidenceRecord">
+      <Column Name="StudentRecordId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StudentResidenceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="StudentRecord_StudentResidenceRecord" Member="StudentRecord" ThisKey="StudentRecordId" OtherKey="StudentRecordId" Type="StudentRecord" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="StudentResidence_StudentResidenceRecord" Member="StudentResidence" ThisKey="StudentResidenceId" OtherKey="StudentResidenceId" Type="StudentResidence" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Patron.StudentResidences" Member="StudentResidences">
+    <Type Name="StudentResidence">
+      <Column Name="StudentResidenceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ResidenceName" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="ResidenceCategory" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="StudentResidence_StudentResidenceRecord" Member="StudentResidenceRecords" ThisKey="StudentResidenceId" OtherKey="StudentResidenceId" Type="StudentResidenceRecord" />
+    </Type>
+  </Table>
+</Database>

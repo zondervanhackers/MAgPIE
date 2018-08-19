@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aeb064f8-8edd-43a1-845a-a99feddaa47c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.niso.org/schemas/sushi/counter_sushi4_1.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="sushi1_7.xsd" MetadataType="Schema" ID="af561f63-9ca3-421c-8610-c4d9afcc7dd6" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/sushi1_7.xsd" />
+    <MetadataFile FileName="counter4_1.xsd" MetadataType="Schema" ID="43175908-aa48-42a7-b819-d1b22eaf9e98" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/counter4_1.xsd" />
+    <MetadataFile FileName="counterElements4_1.xsd" MetadataType="Schema" ID="81d94bf0-6e7f-4de0-b427-f3d6750e82ea" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/counterElements4_1.xsd" />
+    <MetadataFile FileName="counter_sushi4_1.xsd" MetadataType="Schema" ID="83e87999-d8f3-4eae-974b-63d69605223a" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/counter_sushi4_1.xsd" />
+    <MetadataFile FileName="SushiService.wsdl" MetadataType="Wsdl" ID="c6c9b227-8b0c-4a4c-86bd-d37c0ef7e791" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/counter_sushi4_1.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

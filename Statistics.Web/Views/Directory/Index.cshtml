@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "~/Views/Shared/_Master.cshtml";
+    ViewBag.Title = "Zondervan Library";
+}
+
+@section Styles
+{
+    <style type="text/css">
+        html
+        {
+            height: 100%;
+        }
+
+        body
+        {
+            margin: 0px;
+            padding: 0px 5px;
+            font-family: 'Segoe UI', 'Lucidia Grande', sans-serif;
+            font-size: 10pt;
+            min-height: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+		#banner
+		{
+			height: 10px;
+			background: #432440;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+		}
+
+        #center
+        {
+			margin: 15px 0px;
+            text-align: center;
+            max-width: 650px;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        p
+        {
+            margin: 7px 0px 0px 0px;
+        }
+
+		p.short
+		{
+			margin-top: 2px;
+		}
+
+		.spacer
+		{
+			width: 100%;
+			height: 7px;
+		}
+    </style>
+}
+
+<div id="banner"></div>
+
+<div id="center">
+    <img alt="Logo" title="" src="/assets/images/logo.png" />
+    <p>This domain is primarily used to house Zondervan Library developmental or in-house tools.</p>
+    <p>It is likely you have either come to this page accidentally, or were looking for one of the following sites:</p>
+    <p>@Html.ActionLink("Taylor University Yearbooks by Year", "Index", "Yearbook")</p>
+    <p class="short">@Html.ActionLink("Taylor University Alumni Catalogs by School Year", "Index", "AcademicCatalog")</p>
+    <p class="short">@Html.ActionLink("Taylor University Alumni Magazines by Issue", "Index", "AlumniMagazine")</p>
+    <p class="short"><a href="http://lewisconference.zondervanlibrary.org/">8th Biennial Frances White Ewbank Colloquium on C.S. Lewis & Friends</a></p>
+</div>

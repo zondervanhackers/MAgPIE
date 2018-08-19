@@ -1,0 +1,75 @@
+﻿<meta charset="utf-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/Content/Statistics.css" />
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/ui-bootstrap-custom-0.13.4.min.js"></script>
+<script src="~/Scripts/ui-bootstrap-custom-tpls-0.13.4.min.js"></script>
+<script src="~/Scripts/rzslider.js"></script>
+<script src="~/Scripts/angular-animate.js"></script>
+<script src="~/Scripts/Overall.js"></script>
+<!-- Load d3.js and c3.js -->
+<script src="~/Scripts/d3.min.js" charset="utf-8"></script>
+<script src="~/Scripts/c3.min.js"></script>
+<h3>Library Statistics</h3>
+<div ng-app="plunker">
+    <script type="text/ng-template" id="group-template.html">
+        <div class="panel {{panelClass || 'panel-default'}}" style="Display:inline-block">
+            <div class="panel-heading" style="background-color:#f59714">
+                <h4 class="panel-title">
+                    <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading">
+                        <span ng-class="{'text-muted': isDisabled}">{{heading}}</span>
+                    </a>
+                </h4>
+            </div>
+            <div class="panel-collapse collapse" collapse="!isOpen" style="padding-left: 100px">
+                <div class="panel-body" style="text-align: left; background-color:#F8E6FF;" ng-transclude></div>
+            </div>
+        </div>
+    </script>
+    <div ng-module="mainApp">
+        <h2 style="text-align:center">Overall Stats</h2>
+        <div ng-controller="MainCtrl">
+            <div style="background-color: #f5bf72;margin-left: 150px;margin-right: 150px; padding: 30px">
+                <rzslider rz-slider-floor="dateSlider.floor"
+                          rz-slider-ceil="dateSlider.ceil"
+                          rz-slider-high="dateSlider.max"
+                          rz-slider-model="dateSlider.min"
+                          rz-slider-translate="DateTranslate"
+                          rz-slider-always-show-bar="true"
+                          rz-slider-draggable-range="true"
+                          rz-slider-step="1">
+                </rzslider>
+                <div id="chart">
+                </div>
+            </div>
+            <div style="display: table; margin: 0 auto">
+                <ul>
+                    <li class="listButton selected" id="Full Text" ng-click="setCategory($event,'Full Text')">OverallFullText:<br /> {{Overall.OverallFullText}}</li>
+                    <li class="listButton" id="Record Views" ng-click="setCategory($event,'Record Views')">OverallRecordViews:<br /> {{Overall.OverallRecordViews}}</li>
+                    <li class="listButton" id="Result Clicks" ng-click="setCategory($event,'Result Clicks')">OverallResultClicks:<br /> {{Overall.OverallResultClicks}}</li>
+                    <li class="listButton" id="Searches" ng-click="setCategory($event,'Searches')">OverallSearches:<br /> {{Overall.OverallSearches}}</li>
+                </ul>
+            </div>
+            <div style="display:inline-block; width:33%; float:left">
+                <h2>Top Databases</h2>
+                <accordion>
+                    <accordion-group heading="{{group.title}}" ng-repeat="group in groups" template-url="group-template.html">
+                        <div ng-repeat="(category,val) in group.content"><h4>{{category}}: {{val}}</h4></div>
+                    </accordion-group>
+                </accordion>
+            </div>
+            <div style="display:inline-block; width:30%; float:left">
+                <h2>Top Vendors</h2>
+                <ul ng-repeat="item in Vendors">
+                    <li>{{item.name}}: {{item.value}}</li>
+                </ul>
+            </div>
+            <div style="display:inline-block; width:30%; float:left">
+                <h2>Top Databases</h2>
+                <ul ng-repeat="database in Databases">
+                    <li>{{database.name}}: {{database.value}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

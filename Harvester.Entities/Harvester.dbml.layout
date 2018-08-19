@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Harvester">
+  <DataContextMoniker Name="/HarvesterDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c6e89a0e-54a1-479d-8247-343b5ca230f5" absoluteBounds="6.625, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/HarvesterDataContext/Repository" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38e3a68f-e298-418e-bc80-6da023147bec" absoluteBounds="6.64, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d70c6e9d-241a-44ce-a8aa-e038013c2140" absoluteBounds="3.5, 2.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HarvesterDataContext/DirectoryRecord" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ced89cf1-0a03-4c8b-8c2b-c0f0ec87b5e2" absoluteBounds="3.5150000005960464, 3.0850000008940697, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3bf55f30-946e-4e35-b00e-e6a3bc53cee7" absoluteBounds="3.5, 5.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/HarvesterDataContext/OperationRecord" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6fea3fe9-f930-45f6-a3f8-cb5e2d357db3" absoluteBounds="3.5150000005960464, 5.83500000089407, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d6c8fb01-272f-443c-87e2-5d31889cc336" absoluteBounds="0.75, 2.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HarvesterDataContext/Operation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55490229-8e9e-4b40-96ef-d7a92cee944a" absoluteBounds="0.765, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.625 : 3.45119466145833); (5.5 : 3.45119466145833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HarvesterDataContext/Repository/Repository_DirectoryRecord" />
+      <nodes>
+        <classShapeMoniker Id="c6e89a0e-54a1-479d-8247-343b5ca230f5" />
+        <classShapeMoniker Id="d70c6e9d-241a-44ce-a8aa-e038013c2140" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.34699625651042); (3.5 : 3.34699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HarvesterDataContext/Operation/Operation_DirectoryRecord" />
+      <nodes>
+        <classShapeMoniker Id="d6c8fb01-272f-443c-87e2-5d31889cc336" />
+        <classShapeMoniker Id="d70c6e9d-241a-44ce-a8aa-e038013c2140" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 3.94399251302083); (1.75 : 6.06814697265625); (3.5 : 6.06814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HarvesterDataContext/Operation/Operation_OperationRecord" />
+      <nodes>
+        <classShapeMoniker Id="d6c8fb01-272f-443c-87e2-5d31889cc336" />
+        <classShapeMoniker Id="3bf55f30-946e-4e35-b00e-e6a3bc53cee7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d59b87a3-4599-4423-9985-6635c7589415" absoluteBounds="3.375, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/HarvesterDataContext/CounterOperationRecord" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47fd9d1f-0dc4-484c-b8ac-452842af6dd0" absoluteBounds="3.3899999999999997, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 2.75); (1.75 : 1.35236537292312); (3.375 : 1.35236537292312)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Caller">
+      <AssociationMoniker Name="/HarvesterDataContext/Operation/Operation_CounterOperationRecord" />
+      <nodes>
+        <classShapeMoniker Id="d6c8fb01-272f-443c-87e2-5d31889cc336" />
+        <classShapeMoniker Id="d59b87a3-4599-4423-9985-6635c7589415" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.625 : 2.75); (7.625 : 1.38544840494792); (5.375 : 1.38544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HarvesterDataContext/Repository/Repository_CounterOperationRecord" />
+      <nodes>
+        <classShapeMoniker Id="c6e89a0e-54a1-479d-8247-343b5ca230f5" />
+        <classShapeMoniker Id="d59b87a3-4599-4423-9985-6635c7589415" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6d3f6e73-abd5-488b-b7cd-a1b7093112bb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://sushi.mpsinsight.com/counter_sushi4_0/services/SushiService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SushiService.xsd" MetadataType="Schema" ID="18d9db53-3314-4204-a9c3-c475011b28a1" SourceId="1" SourceUrl="http://sushi.mpsinsight.com/counter_sushi4_0/services/SushiService?xsd=counter4_0.xsd" />
+    <MetadataFile FileName="SushiService1.xsd" MetadataType="Schema" ID="03759160-84b5-4eff-b15e-5c3c28e822fe" SourceId="1" SourceUrl="http://sushi.mpsinsight.com/counter_sushi4_0/services/SushiService?xsd=counterElements4_0.xsd" />
+    <MetadataFile FileName="SushiService2.xsd" MetadataType="Schema" ID="82f0b39a-ad6f-4997-8adc-2ab87f716762" SourceId="1" SourceUrl="http://sushi.mpsinsight.com/counter_sushi4_0/services/SushiService?xsd=sushi1_6.xsd" />
+    <MetadataFile FileName="SushiService.wsdl" MetadataType="Wsdl" ID="95e1fc32-4db1-4c0e-94ca-c8ff8e64c895" SourceId="1" SourceUrl="http://sushi.mpsinsight.com/counter_sushi4_0/services/SushiService?wsdl" />
+    <MetadataFile FileName="SushiService3.xsd" MetadataType="Schema" ID="9be9f41f-2665-4169-b44d-d4b854686aa9" SourceId="1" SourceUrl="http://sushi.mpsinsight.com/counter_sushi4_0/services/SushiService?xsd=counter_sushi4_0.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

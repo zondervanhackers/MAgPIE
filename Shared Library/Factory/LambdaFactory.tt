@@ -1,0 +1,90 @@
+<#@ template language="C#" debug="True" #>
+<#@ output extension="cs" #>
+<#@ include file="T4Toolbox.tt" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System" #>
+<#
+// <copyright file="LambdaFactory.tt" company="">
+//  Copyright © . All Rights Reserved.
+// </copyright>
+
+	Int32 argumentMax = 4;
+#>
+using System;
+using System.Diagnostics.Contracts;
+
+namespace ZondervanLibrary.SharedLibrary.Factory
+{
+	public static class LambdaFactory
+	{
+<#
+	var types = new List<String>() { };
+
+	for (int argument = 0; argument <= argumentMax; argument++)
+	{
+		var typesCopy1 = new List<String>(types);
+		var typesCopy2 = new List<String>(types);
+		typesCopy1.Insert(0, "TInstance");
+		typesCopy2.Add("TInstance");
+		var type1 = String.Format("<{0}>", String.Join(", ", typesCopy1));
+		var type2 = String.Format("<{0}>", String.Join(", ", typesCopy2));
+#>
+		public static LambdaFactory<#= type1 #> Wrap<#= type1 #>(Func<#= type2 #> constructor)
+		{
+			return new LambdaFactory<#= type1 #>(constructor);
+		}
+<#
+		if (argument < argumentMax)
+		{
+#>
+
+<#
+		}
+		types.Add(String.Format("TMethodArg{0}", argument+1));
+	}
+#>
+	}
+
+<#
+	types = new List<String>() { };
+	var typedArguments = new List<String>() { };
+	var untypedArguments = new List<String>() { };
+
+	for (int argument = 0; argument <= argumentMax; argument++)
+	{
+		var typesCopy1 = new List<String>(types);
+		var typesCopy2 = new List<String>(types);
+		typesCopy1.Insert(0, "TInstance");
+		typesCopy2.Add("TInstance");
+		var type1 = String.Format("<{0}>", String.Join(", ", typesCopy1));
+		var type2 = String.Format("<{0}>", String.Join(", ", typesCopy2));
+#>
+	public class LambdaFactory<#= type1 #> : IFactory<#= type1 #>
+	{
+		private Func<#= type2 #> _constructor;
+
+		public LambdaFactory(Func<#= type2 #> constructor)
+		{
+			Contract.Requires(constructor != null);
+
+			_constructor = constructor;
+		}
+
+		public TInstance CreateInstance(<#= String.Join(", ", typedArguments) #>)
+		{
+			return _constructor(<#= String.Join(", ", untypedArguments) #>);
+		}
+	} 
+<#
+	if (argument < argumentMax)
+	{
+#>
+
+<#
+	}
+		types.Add(String.Format("TMethodArg{0}", argument+1));
+		typedArguments.Add(String.Format("TMethodArg{0} argument{0}", argument+1));
+		untypedArguments.Add(String.Format("argument{0}", argument+1));
+	}
+#>
+}

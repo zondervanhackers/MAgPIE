@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Directory.FolderDirectoryRepository" Collapsed="true">
+    <Position X="6" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACAABAAAAAQAAAAAAAAAAEAAQAkAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\FolderDirectoryRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Directory.FtpDirectoryRepository" Collapsed="true">
+    <Position X="6" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAEAAAAASAAAAAAAAQAAAAAAAAAAEAAQAEAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\FtpDirectoryRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ZondervanLibrary.Harvester.Core.Repository.Directory.SftpDirectoryRepository" Collapsed="true">
+    <Position X="6" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAEAAAAACAAAAAAAAQAAAAAAAAAAEAAQCEAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\SftpDirectoryRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.IRepository" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Journal.IJournalRepository" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Journal\IJournalRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Directory.IDirectoryRepository" Collapsed="true">
+    <Position X="6" Y="3.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAQAAAEAAAAAAEAAAAEAAAAAAAA=</HashCode>
+      <FileName>Repository\Directory\IDirectoryRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZondervanLibrary.Harvester.Core.Repository.Database.IDatabaseRepository" Collapsed="true">
+    <Position X="3.75" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\Database\IDatabaseRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

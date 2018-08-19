@@ -1,0 +1,394 @@
+﻿<win:GlassWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:win="clr-namespace:ZondervanLibrary.Harvester.Wpf.Windows"
+        xmlns:add="clr-namespace:ZondervanLibrary.Harvester.Wpf.Dialogs.Repository.Add"
+        xmlns:vm="clr-namespace:ZondervanLibrary.Harvester.Wpf.Dialogs.Repository.ViewModels"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:converters="clr-namespace:ZondervanLibrary.Harvester.Wpf.Converters"
+        xmlns:markup="clr-namespace:ZondervanLibrary.Harvester.Wpf.Markup"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="ZondervanLibrary.Harvester.Wpf.Dialogs.Repository.Add.AddRepositoryDialogWindow"
+        Title="Add Repository"
+        TextOptions.TextFormattingMode="Display"
+        Style="{DynamicResource DialogWindowStyle}" MinWidth="600" MinHeight="300">
+
+    <win:GlassWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../DialogWindowStyles.xaml" />
+                <ResourceDictionary Source="../../../Resources/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+            <Canvas x:Key="selection_indication" Width="76" Height="76" Clip="F1 M 0,0L 76,0L 76,76L 0,76L 0,0">
+                <Path Width="25" Height="28.5" Canvas.Left="25.1849" Canvas.Top="23.3542" Stretch="Fill" Fill="{DynamicResource BlackBrush}" Data="F1 M 39.8307,37.6042L 36.6641,34.4375L 25.1849,23.3542L 28.4766,23.3542L 43.5182,37.6042L 28.4766,51.8542L 25.1849,51.8542L 36.6641,40.7708L 39.8307,37.6042 Z "/>
+            </Canvas>
+
+            <Canvas x:Key="selection_indication_hover" Width="76" Height="76" Clip="F1 M 0,0L 76,0L 76,76L 0,76L 0,0">
+                <Path Width="25" Height="28.5" Canvas.Left="25.1849" Canvas.Top="23.3542" Stretch="Fill" Fill="{DynamicResource GrayHoverBrush}" Data="F1 M 39.8307,37.6042L 36.6641,34.4375L 25.1849,23.3542L 28.4766,23.3542L 43.5182,37.6042L 28.4766,51.8542L 25.1849,51.8542L 36.6641,40.7708L 39.8307,37.6042 Z "/>
+            </Canvas>
+            
+            <Style TargetType="{x:Type TabControl}">
+                <Setter Property="Background" Value="{x:Null}" />
+                <Setter Property="BorderBrush" Value="{x:Null}" />
+                <Setter Property="TabStripPlacement" Value="Left" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TabControl}">
+                            <StackPanel Orientation="Horizontal">
+                                <TabPanel IsItemsHost="True" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" />
+                                <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="0"
+                                        Background="Transparent"
+                                        KeyboardNavigation.DirectionalNavigation="Contained"
+                                        KeyboardNavigation.TabIndex="2"
+                                        KeyboardNavigation.TabNavigation="Local">
+                                    <ContentPresenter x:Name="PART_SelectedContentHost"
+                                                      ContentSource="SelectedContent"
+                                                      Margin="0"
+                                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Border>
+                            </StackPanel>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            
+            <Style TargetType="TabItem">
+                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                <Setter Property="IsTabStop" Value="False" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                <Setter Property="MinWidth" Value="5" />
+                <Setter Property="MinHeight" Value="5" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="BorderBrush" Value="{DynamicResource AccentColorBrush}" />
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Foreground" Value="{DynamicResource BlackBrush}" />
+                <Setter Property="SnapsToDevicePixels" Value="True" />
+                <Setter Property="controls:ControlsHelper.HeaderFontSize" Value="{DynamicResource TabItemFontSize}" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TabItem">
+                            <Border x:Name="Border"
+                                    HorizontalAlignment="Stretch"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    Padding="20"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                                
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter x:Name="ContentSite"
+                                                  Margin="{TemplateBinding Padding}"
+                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                  VerticalAlignment="Center"
+                                                  TextElement.FontSize="{TemplateBinding controls:ControlsHelper.HeaderFontSize}"
+                                                  TextElement.FontStretch="{TemplateBinding controls:ControlsHelper.HeaderFontStretch}"
+                                                  TextElement.FontWeight="Light"
+                                                  TextElement.Foreground="{TemplateBinding Foreground}"
+                                                  ContentSource="Header"
+                                                  RecognizesAccessKey="True" Width="175" />
+
+                                    <Rectangle x:Name="SelectionIndication" Width="10" Height="22" VerticalAlignment="Center" />
+                                </StackPanel>
+                                
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" TargetName="Border" Value="{DynamicResource AccentColorBrush}" />
+                                    <Setter Property="Visibility" TargetName="SelectionIndication" Value="Visible" />
+                                    <Setter Property="Fill" TargetName="SelectionIndication">
+                                        <Setter.Value>
+                                            <VisualBrush Visual="{StaticResource selection_indication}" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                                <Trigger Property="IsSelected" Value="False">
+                                    <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="{DynamicResource GrayNormalBrush}" />
+                                    <Setter Property="Visibility" TargetName="SelectionIndication" Value="Hidden" />
+                                </Trigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="IsMouseOver" SourceName="ContentSite" Value="True" />
+                                        <Condition Property="IsSelected" Value="False" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="Background" TargetName="Border" Value="{DynamicResource AccentColorBrush4}" />
+                                    <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="{DynamicResource GrayHoverBrush}" />
+                                    <Setter Property="Visibility" TargetName="SelectionIndication" Value="Visible" />
+                                    <Setter Property="Fill" TargetName="SelectionIndication">
+                                        <Setter.Value>
+                                            <VisualBrush Visual="{StaticResource selection_indication_hover}" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </MultiTrigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </win:GlassWindow.Resources>
+
+    <DockPanel>
+        <Grid Style="{StaticResource ButtonGridStyle}" DockPanel.Dock="Bottom">
+            <StackPanel Style="{StaticResource ButtonStackPanelStyle}" >
+                <Button Style="{StaticResource ButtonStyle}" Content="OK" IsDefault="True" />
+                <Button Style="{StaticResource ButtonStyle}" Content="Cancel" IsCancel="True" />
+            </StackPanel>
+        </Grid>
+
+        <Border Background="{DynamicResource WindowBackgroundBrush}">
+            <TabControl TabStripPlacement="Left" ItemsSource="{Binding RepositoryGroups}" Padding="0">
+                <TabControl.ItemTemplate>
+                    <DataTemplate>  
+                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+                    </DataTemplate>
+                </TabControl.ItemTemplate>
+                
+                <TabControl.ContentTemplate>
+                    <DataTemplate>
+                        
+                        <TabControl TabStripPlacement="Left" ItemsSource="{Binding Repositories}" SelectedItem="{Binding SelectedRepository}" Margin="0">
+                            <TabControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+                                </DataTemplate>
+                            </TabControl.ItemTemplate>
+                            
+                            <TabControl.Resources>
+                                <DataTemplate DataType="{x:Type vm:FolderDirectoryRepositoryViewModel}">
+                                    <Border Style="{StaticResource OuterBorder}">
+                                        <Grid Style="{StaticResource WrapperGrid}">
+                                            <Border Style="{StaticResource InnerBorder}" />
+
+                                            <Grid Style="{StaticResource FormGrid}">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <TextBlock Style="{StaticResource HeaderTextBlock}"/>
+
+                                                <TextBlock Grid.Row="1" Grid.Column="0" Text="Path:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Path}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="1" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The path to the folder." />
+                                            </Grid>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                                
+                                <DataTemplate DataType="{x:Type vm:FtpDirectoryRepositoryViewModel}">
+                                    <Border Style="{StaticResource OuterBorder}">
+                                        <Grid Style="{StaticResource WrapperGrid}">
+                                            <Border Style="{StaticResource InnerBorder}" />
+
+                                            <Grid Style="{StaticResource FormGrid}">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <TextBlock Style="{StaticResource HeaderTextBlock}"/>
+
+                                                <TextBlock Grid.Row="1" Grid.Column="0" Text="Host:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Host}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="1" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The address of the host." />
+                                                
+                                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Port:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Port}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="2" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The port number to connect to the server on.&#x0a;The default value is 21." />
+
+                                                <TextBlock Grid.Row="3" Grid.Column="0" Text="Username:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Username}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="3" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The username to use for authentication." />
+
+                                                <TextBlock Grid.Row="4" Grid.Column="0" Text="Password:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Password}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="4" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The password to use for authentication." />
+                                                
+                                                <CheckBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="Use SSL" Style="{StaticResource CheckBoxStyle}" IsChecked="{Binding UseSsl}" />
+                                            </Grid>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                                
+                                <DataTemplate DataType="{x:Type vm:SftpDirectoryRepositoryViewModel}">
+                                    <Border Style="{StaticResource OuterBorder}">
+                                        <Grid Style="{StaticResource WrapperGrid}">
+                                            <Border Style="{StaticResource InnerBorder}" />
+
+                                            <Grid Style="{StaticResource FormGrid}">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <TextBlock Style="{StaticResource HeaderTextBlock}"/>
+
+                                                <TextBlock Grid.Row="1" Grid.Column="0" Text="Host:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Host}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="1" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The address of the host." />
+
+                                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Port:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Port}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="2" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The port number to connect to the server on.&#x0a;The default value is 22." />
+
+                                                <TextBlock Grid.Row="3" Grid.Column="0" Text="Username:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Username}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="3" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The username to use for authentication." />
+
+                                                <TextBlock Grid.Row="4" Grid.Column="0" Text="Password:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Password}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="4" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The password to use for authentication." />
+                                            </Grid>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                                
+                                <DataTemplate DataType="{x:Type vm:SqlServerDatabaseRepositoryViewModel}">
+                                    <Border Style="{StaticResource OuterBorder}">
+                                        <Grid Style="{StaticResource WrapperGrid}">
+                                            <Border Style="{StaticResource InnerBorder}" />
+
+                                            <Grid Style="{StaticResource FormGrid}">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <TextBlock Style="{StaticResource HeaderTextBlock}"/>
+
+                                                <TextBlock Grid.Row="1" Grid.Column="0" Text="Server:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Server}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="1" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The address of the server." />
+
+                                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Database:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Database}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="2" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The database to connect to on the server.&#x0a;The authentication provided must have access to this database." />
+
+                                                <TextBlock Grid.Row="3" Grid.Column="0" Text="Authentication:" Style="{StaticResource TextBlockStyle}" />
+                                                <ComboBox Grid.Row="3" Grid.Column="1" Style="{StaticResource ComboBoxStyle}" ItemsSource="{markup:EnumSource {x:Type vm:SqlServerAuthenticationMethod}}" DisplayMemberPath="DisplayName" SelectedValuePath="Value" SelectedValue="{Binding AuthenticationMethod}" />
+                                                <Rectangle Grid.Row="3" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The method used for authentication.&#x0a;&#x0a;Integrated will use the crendentials of the account the Harvester Service is running on to authenticate.&#x0a;&#x0a;SQL Server will attempt to authenticate using the provided username and password." />
+
+                                                <TextBlock Grid.Row="4" Grid.Column="0" Text="Username:" Style="{StaticResource TextBlockStyle}" Visibility="{Binding AuthenticationMethod, Converter={converters:SqlServerAuthenticationConverter}}" />
+                                                <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Username}" Style="{StaticResource TextBoxStyle}" Visibility="{Binding AuthenticationMethod, Converter={converters:SqlServerAuthenticationConverter}}" />
+
+                                                <TextBlock Grid.Row="5" Grid.Column="0" Text="Password:" Style="{StaticResource TextBlockStyle}" Visibility="{Binding AuthenticationMethod, Converter={converters:SqlServerAuthenticationConverter}}" />
+                                                <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Password}" Style="{StaticResource TextBoxStyle}" Visibility="{Binding AuthenticationMethod, Converter={converters:SqlServerAuthenticationConverter}}" />
+                                            </Grid>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                                
+                                <DataTemplate DataType="{x:Type vm:SushiJournalRepositoryViewModel}">
+                                    <Border Style="{StaticResource OuterBorder}">
+                                        <Grid Style="{StaticResource WrapperGrid}">
+                                            <Border Style="{StaticResource InnerBorder}" />
+
+                                            <Grid Style="{StaticResource FormGrid}">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <TextBlock Style="{StaticResource HeaderTextBlock}"/>
+
+                                                <TextBlock Grid.Row="1" Grid.Column="0" Text="Sushi Url:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding SushiUrl}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="1" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The address of the vendor's sushi protocol server." />
+
+                                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Requestor ID:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding RequestorId}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="2" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The Requestor ID." />
+
+                                                <TextBlock Grid.Row="3" Grid.Column="0" Text="Customer ID:" Style="{StaticResource TextBlockStyle}" />
+                                                <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding CustomerId}" Style="{StaticResource TextBoxStyle}" />
+                                                <Rectangle Grid.Row="3" Grid.Column="2" Style="{StaticResource ToolTipRectange}" ToolTip="The Customer ID." />
+                                            </Grid>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </TabControl.Resources>
+                        </TabControl>
+                        
+                    </DataTemplate>
+                </TabControl.ContentTemplate>
+            </TabControl>
+        </Border>
+        <!--<Border Background="{DynamicResource {x:Static SystemColors.WindowBrush}}">-->
+        <!--<TabControl ItemsSource="{Binding Providers}" Height="200" Width="400" Background="#FF2D2D30">
+                <TabControl.Resources>
+                    <Style TargetType="TabItem">
+                        <Setter Property="Header" Value="{Binding Name}" />
+                        <Setter Property="HeaderTemplate">
+                            <Setter.Value>
+                                <DataTemplate DataType="{x:Type TabItem}">
+                                        <ContentPresenter>
+                                            <ContentPresenter.Content>
+                                                <TextBlock Text="{TemplateBinding Content}" Height="50" Width="200"  Foreground="#FFF1F1F1" />
+                                            </ContentPresenter.Content>
+                                        </ContentPresenter>
+                                </DataTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                    <DataTemplate DataType="{x:Type repo:DirectoryRepositoryProviderViewModel}">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Directory Path:" />
+                            <TextBox Width="200" />
+                            <Button Content="Browse ..." />
+                        </StackPanel>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type repo:DatabaseRepositoryProviderViewModel}">
+                        <TextBlock Text="This is Database" />
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type repo:JournalRepositoryProviderViewModel}">
+                        <TextBlock Text="This is for Journals" />
+                    </DataTemplate>
+                </TabControl.Resources>
+            </TabControl>-->
+        <!--</Border>-->
+    </DockPanel>
+</win:GlassWindow>

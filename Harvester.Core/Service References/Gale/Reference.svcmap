@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9989239c-773a-4ac0-98d0-b092f02ee84d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.ComponentModel.BindingList`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://usagereports.galegroup.com/sushi/ws/counter_sushi4_0.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="sushi1_6.xsd" MetadataType="Schema" ID="7853c54c-5fb2-4d0f-b9b4-0a0acf2cd7e4" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/sushi1_6.xsd" />
+    <MetadataFile FileName="counter4_0.xsd" MetadataType="Schema" ID="711e6555-df79-42d2-8871-a738f9944710" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/counter4_0.xsd" />
+    <MetadataFile FileName="counterElements4_0.xsd" MetadataType="Schema" ID="0604ee2e-8a66-4ccf-9625-2158b6368e19" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/counterElements4_0.xsd" />
+    <MetadataFile FileName="counter_sushi4_0.xsd" MetadataType="Schema" ID="f48bac95-0bcb-48e8-a0ac-71785d8ef815" SourceId="1" SourceUrl="http://www.niso.org/schemas/sushi/counter_sushi4_0.xsd" />
+    <MetadataFile FileName="SushiService.wsdl" MetadataType="Wsdl" ID="9eaecb28-d38a-4d9e-b7c3-af25b1fd5067" SourceId="1" SourceUrl="http://usagereports.galegroup.com/sushi/ws/counter_sushi4_0.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
