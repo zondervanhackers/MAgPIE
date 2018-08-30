@@ -1,34 +1,46 @@
 # MAgPIE
-Metrics Aggregation Processing &amp; Intake Engine
 
-This project was funded and created by Zondervan Library employees and student workers
+## Getting Started
 
-* [Link Test](../HarvesterService)
+MAgPIE (Metrics Aggregation Processing & Intake Engine) is an ETL system developed by Zondervan Library of Taylor University with the help of librarians and student workers. The main entry point for the system is the windows service (Harvester) that handles ingesting data and operation scheduling. When installed the Harvester will generate a configuration file and wait until a complete version is present to begin operations.
 
-**High Level Info**
--------------
-* [Harvester Service](../Harvester Service)
+## Prerequisites
 
-* [Electronic Journal Vendors Master List](Electronic%20Journal%20Vendors%20Master%20List)
-* [Vendor or Counter Inconsistencies](https://bitbucket.org/zondervanhackers/zondervan-library/wiki/Vendor%20or%20Counter%20Inconsistencies.)
-* [VAMP Transaction Exporter](VAMP Transaction Exporter)
-* [Road Map (Goals)](RoadMap (Goals))
+    Windows OS (Tested on Windows 10,8,7, Server 2012)
+    SQL SERVER 2012
+    MS Build Tools 2017
+    .Net Framework 4.5 & 4.6
 
+## Installing
 
-**Models**
--------------
-* [Configuration File Specifications](Configuration%20File%20Specifications)
-* [Operation Implementations](Operation Logic)
+We use the Cake (C# Make) to handle the building of the project, installation of the windows service, set up of the database it will be using to store the data. A powershell (.ps1) file is located in the root directory "build.ps1" and running it will completely install and deploy MAgPIE though this can be changed by modifying the file or passing different command line arguments.
 
-**Statistics Database**
+## High Level Explanations
 
-* [Circulation](Circulation Database)
-* [Digital](Digital Database)
-* [EZProxy](EZProxy Database)
-* [Patron](Patron Database)
-* [Statista](Statista Database)
+[Harvester Service](wiki/Harvester-Service.md)
 
-**Harvester Database**
+[Configuration File Specifications](wiki/models/Configuration-File-Specifications.md)
 
-* [Directory Records](Directory Records)
-* [Operation Records](Operation Records)
+[Operation Implementations](wiki/models/Operation-Logic.md)
+
+### Statistics Database
+
+[Circulation](wiki/models/Statistics-Database/Circulation-Database.md)
+
+[Digital](wiki/models/Statistics-Database/Digital-Database.md)
+
+[EZProxy](wiki/models/Statistics-Database/EZProxy-Database.md)
+
+[Patron](wiki/models/Statistics-Database/Patron-Database.md)
+
+[Statista](wiki/models/Statistics-Database/Statista-Database.md)
+
+### Harvester Database
+
+[Directory Records](wiki/models/Harvester-Database/Directory-Records.md)
+
+[Operation Records](wiki/models/Harvester-Database/Operation-Records.md)
+
+## Info for Developers
+
+[Development Configuration](wiki/Development-Configuration.md)
