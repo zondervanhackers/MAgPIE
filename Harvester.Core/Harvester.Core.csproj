@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,8 +55,8 @@
     <Reference Include="FileHelpers, Version=3.1.5.0, Culture=neutral, PublicKeyToken=3e0c08d59cc3d657, processorArchitecture=MSIL">
       <HintPath>..\packages\FileHelpers.3.1.5\lib\net45\FileHelpers.dll</HintPath>
     </Reference>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="HtmlAgilityPack, Version=1.5.5.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.5.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="HtmlUnit, Version=2.19.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NHtmlUnit.2.19.0\lib\net45\HtmlUnit.dll</HintPath>
@@ -184,9 +185,6 @@
       <HintPath>..\packages\NHtmlUnit.2.19.0\lib\net45\NHtmlUnit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="OpenPop, Version=2.0.6.1120, Culture=neutral, PublicKeyToken=6bdb97f144b7efc8, processorArchitecture=MSIL">
-      <HintPath>..\packages\OpenPop.NET.2.0.6.1120\lib\net40\OpenPop.dll</HintPath>
-    </Reference>
     <Reference Include="RazorHosting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleBrowser.0.5.79.0\lib\net40\RazorHosting.dll</HintPath>
       <Private>True</Private>
@@ -197,10 +195,6 @@
     </Reference>
     <Reference Include="SimpleBrowser, Version=0.5.79.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleBrowser.0.5.79.0\lib\net40\SimpleBrowser.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SimpleBrowser.WebDriver, Version=0.5.37.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleBrowser.WebDriver.0.5.37\lib\net40\SimpleBrowser.WebDriver.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

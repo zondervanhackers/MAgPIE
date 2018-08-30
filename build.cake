@@ -5,14 +5,25 @@
 // ARGUMENTS
 ///////////////////////////////////////////////////////////////////////////////
 
-var target = Argument("target", "Vamp");
-var configuration = Argument("configuration", "Test");
+var target = Argument("target", "MAgPIE");
+var configuration = Argument("configuration", "Production");
 var solutionFile = GetFiles("*.sln").First();
 
 
 ///////////////////////////////////////////////////////////////////////////////
 // TASKS
 ///////////////////////////////////////////////////////////////////////////////
+
+Task("Stop Harvester Service")
+	.Does(() => {
+		string ServiceName = string.Format("Harvester Service ({0})", configuration);
+
+		if (GetServices().Any(x => x.ServiceName == ServiceName))
+		{
+			if (CanServiceStop(ServiceName))
+				StopService(ServiceName);
+		}
+});
 
 Task("NugetRestore")
 	.Does(() => {
@@ -23,30 +34,28 @@ Task("NugetRestore")
 
 		Information("Restoring {0}", solutionFile);
 		NuGetRestore(solutionFile);
-	});
+});
 
 Task("Clean")
-  .Does(() =>
-  {
-	Information("Directories to Clean {0}", string.Join(", \n", GetDirectories(string.Format("../**/obj/{0}", configuration)).Select(x => x.Segments[6])));
-	
-    CleanDirectories(string.Format("**/obj/{0}",
-      configuration));
-    CleanDirectories(string.Format("**/bin/{0}",
-      configuration));
-  });
+	.Does(() => {
+		var objDirectories = GetDirectories(string.Format("../**/obj/{0}", configuration));
+		var binDirectories = GetDirectories(string.Format("../**/bin/{0}", configuration));
+
+		Information("Directories to Clean {0}", string.Join(", \n", objDirectories.Select(x => { return $"{x.Segments[x.Segments.Length - 3]} ({x.Segments[x.Segments.Length - 1]})"; })));
+		
+		CleanDirectories(objDirectories);
+		CleanDirectories(binDirectories);
+});
 
 Task("Build")
-	.Does(() => 
-	{
+	.Does(() => {
 		MSBuild(solutionFile, new MSBuildSettings {
 			ToolVersion = MSBuildToolVersion.VS2017,
 			Configuration = configuration,
 			PlatformTarget = PlatformTarget.MSIL,
 			MaxCpuCount = System.Environment.ProcessorCount
 		});
-	}
-);
+});
 
 Task("Build Website")
 	.Does(() => 
@@ -59,8 +68,7 @@ Task("Build Website")
 			.SetMaxCpuCount(System.Environment.ProcessorCount)
 			.WithProperty("PackageLocation", new[] { "Website.zip" })
 		);
-	}
-);
+});
 
 Task("Run Unit Tests")
 	.Does(() =>
@@ -73,23 +81,23 @@ Task("Run Unit Tests")
 			.SetMaxCpuCount(System.Environment.ProcessorCount)
 			.WithProperty("PackageLocation", new[] { "Website.zip" })
 		);
-	}
-);
+});
 
-Task("Build Vamp")
+Task("Build MAgPIE")
+	.IsDependentOn("Stop Harvester Service")
 	.IsDependentOn("NugetRestore")
 	.IsDependentOn("Clean")
 	.IsDependentOn("Build")
-	.IsDependentOn("Build Website")
+	// .IsDependentOn("Build Website")
 	.IsDependentOn("Run Unit Tests");
 
 Task("Deploy Statistics Database")
 	.Does(() => {
 		var dacpacFilePath = GetFiles(string.Format("./Statistics.Database/bin/{0}/Statistics.Database.dacpac", configuration)).First();
 		var sqlPackageSettings = new SqlPackagePublishSettings();
-		sqlPackageSettings.ToolPath = "./DAC/SqlPackage.exe";
+		sqlPackageSettings.ToolPath = "./Test/bin/Release/sqlpackage.exe";
 		sqlPackageSettings.SourceFile = dacpacFilePath;
-		sqlPackageSettings.TargetConnectionString = string.Format("Data Source=LIBRARYSRV18;Initial Catalog=Statistics ({0}); User ID=TeamCityBuilder;Password=WddM8I1nhEgOVh7", configuration);
+		sqlPackageSettings.TargetConnectionString = string.Format("Data Source=MAgPIEServer;Initial Catalog=Statistics ({0}); User ID=TeamCityBuilder;Password=WddM8I1nhEgOVh7", configuration);
 
 		SqlPackagePublish(sqlPackageSettings);
 });
@@ -98,9 +106,9 @@ Task("Deploy Harvester Database")
 	.Does(() => {
 		var dacpacFilePath = GetFiles(string.Format("./Harvester.Database/bin/{0}/Harvester.Database.dacpac", configuration)).First();
 		var sqlPackageSettings = new SqlPackagePublishSettings();
-		sqlPackageSettings.ToolPath = "./DAC/SqlPackage.exe";
+		sqlPackageSettings.ToolPath = "./Test/bin/Release/sqlpackage.exe";
 		sqlPackageSettings.SourceFile = dacpacFilePath;
-		sqlPackageSettings.TargetConnectionString = string.Format("Data Source=LIBRARYSRV18;Initial Catalog=Harvester ({0}); User ID=TeamCityBuilder;Password=WddM8I1nhEgOVh7", configuration);
+		sqlPackageSettings.TargetConnectionString = string.Format("Data Source=MAgPIEServer;Initial Catalog=Harvester ({0}); User ID=TeamCityBuilder;Password=WddM8I1nhEgOVh7", configuration);
 
 		SqlPackagePublish(sqlPackageSettings);
 });
@@ -132,15 +140,15 @@ Task("Install Harvester Service")
 });
 
 
-Task("Deploy Vamp")
+Task("Deploy MAgPIE")
 .IsDependentOn("Deploy Statistics Database")
 .IsDependentOn("Deploy Harvester Database")
 .IsDependentOn("Install Harvester Service")
 ;
 
-Task("Vamp")
-	.IsDependentOn("Build Vamp")
-	.IsDependentOn("Deploy Vamp")
+Task("MAgPIE")
+	.IsDependentOn("Build MAgPIE")
+	.IsDependentOn("Deploy MAgPIE")
 	;
 
-RunTarget(target);
+RunTarget("MAgPIE");

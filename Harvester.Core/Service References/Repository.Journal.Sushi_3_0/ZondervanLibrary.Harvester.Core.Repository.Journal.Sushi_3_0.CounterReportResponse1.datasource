@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="CounterReportResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.CounterReportResponse, Service References.Repository.Journal.Sushi_3_0.Reference.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>ZondervanLibrary.Harvester.Core.Repository.Journal.Sushi_3_0.CounterReportResponse, Service References.Repository.Journal.Sushi_3_0.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>
