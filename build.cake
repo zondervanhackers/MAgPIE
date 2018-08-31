@@ -38,8 +38,8 @@ Task("NugetRestore")
 
 Task("Clean")
 	.Does(() => {
-		var objDirectories = GetDirectories(string.Format("../**/obj/{0}", configuration));
-		var binDirectories = GetDirectories(string.Format("../**/bin/{0}", configuration));
+		var objDirectories = GetDirectories(string.Format("**/obj/{0}", configuration));
+		var binDirectories = GetDirectories(string.Format("**/bin/{0}", configuration));
 
 		Information("Directories to Clean {0}", string.Join(", \n", objDirectories.Select(x => { return $"{x.Segments[x.Segments.Length - 3]} ({x.Segments[x.Segments.Length - 1]})"; })));
 		
