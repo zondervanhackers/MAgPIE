@@ -50,12 +50,11 @@ Task("Clean")
 Task("Build")
 	.Does(() => {
 		MSBuild(solutionFile, new MSBuildSettings {
-			ToolVersion = MSBuildToolVersion.Default,
+			ToolVersion = MSBuildToolVersion.VS2017,
 			Configuration = configuration,
 			PlatformTarget = PlatformTarget.MSIL,
 			MaxCpuCount = System.Environment.ProcessorCount,
 			MSBuildPlatform = MSBuildPlatform.Automatic,
-		});
 });
 
 Task("Build Website")
