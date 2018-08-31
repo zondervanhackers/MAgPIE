@@ -55,6 +55,7 @@ Task("Build")
 			PlatformTarget = PlatformTarget.MSIL,
 			MaxCpuCount = System.Environment.ProcessorCount,
 			MSBuildPlatform = MSBuildPlatform.Automatic,
+		});
 });
 
 Task("Build Website")
