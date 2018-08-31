@@ -50,10 +50,11 @@ Task("Clean")
 Task("Build")
 	.Does(() => {
 		MSBuild(solutionFile, new MSBuildSettings {
-			ToolVersion = MSBuildToolVersion.VS2017,
+			ToolVersion = MSBuildToolVersion.Default,
 			Configuration = configuration,
 			PlatformTarget = PlatformTarget.MSIL,
-			MaxCpuCount = System.Environment.ProcessorCount
+			MaxCpuCount = System.Environment.ProcessorCount,
+			MSBuildPlatform = MSBuildPlatform.Automatic,
 		});
 });
 
@@ -151,4 +152,4 @@ Task("MAgPIE")
 	.IsDependentOn("Deploy MAgPIE")
 	;
 
-RunTarget("MAgPIE");
+RunTarget(target);
