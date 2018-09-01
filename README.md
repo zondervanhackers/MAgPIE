@@ -15,6 +15,10 @@ MAgPIE (Metrics Aggregation Processing & Intake Engine) is an ETL system develop
 
 We use the Cake (C# Make) to handle the building of the project, installation of the windows service, set up of the database it will be using to store the data. A powershell (.ps1) file is located in the root directory "build.ps1" and running it will completely install and deploy MAgPIE though this can be changed by modifying the file or passing different command line arguments.
 
+## Support
+
+Please email magpiezondervan@gmail.com for more support on usage and issues
+
 ## High Level Explanations
 
 [Harvester Service](wiki/Harvester-Service.md)
