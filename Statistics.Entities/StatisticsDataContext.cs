@@ -694,8 +694,9 @@ namespace ZondervanLibrary.Statistics.Entities
                     -- Create/Update Bibliographic Records
                     MERGE [Circulation].[BibliographicRecords] AS T
                     USING (
-	                    SELECT DISTINCT A.OclcNumber, A.Title, A.MaterialFormat, A.Author, A.RunDate
-	                    FROM {transitionTableName} AS A
+			    SELECT A.OclcNumber, MAX(A.Title) AS [Title], MAX(A.MaterialFormat) AS [MaterialFormat], MAX(A.Author) AS [Author], MAX(A.RunDate) AS [RunDate]
+			    FROM {transitionTableName} AS A
+			    GROUP BY OclcNumber
                     ) AS S
                     ON (S.OclcNumber = T.OclcNumber)
                     WHEN NOT MATCHED THEN
