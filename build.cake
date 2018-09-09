@@ -7,6 +7,7 @@
 
 var target = Argument("target", "MAgPIE");
 var configuration = Argument("configuration", "Production");
+var DatabaseServer = Argument("databaseServer", "MAgPIEServer");
 var solutionFile = GetFiles("*.sln").First();
 
 
@@ -98,7 +99,7 @@ Task("Deploy Statistics Database")
 		var sqlPackageSettings = new SqlPackagePublishSettings();
 		sqlPackageSettings.ToolPath = "./Test/bin/Release/sqlpackage.exe";
 		sqlPackageSettings.SourceFile = dacpacFilePath;
-		sqlPackageSettings.TargetConnectionString = string.Format("Data Source=MAgPIEServer;Initial Catalog=Statistics ({0}); User ID=TeamCityBuilder;Password=WddM8I1nhEgOVh7", configuration);
+		sqlPackageSettings.TargetConnectionString = $"Data Source={DatabaseServer};Initial Catalog=Statistics ({configuration}); User ID=TeamCityBuilder;Password=WddM8I1nhEgOVh7";
 
 		SqlPackagePublish(sqlPackageSettings);
 });
@@ -109,8 +110,8 @@ Task("Deploy Harvester Database")
 		var sqlPackageSettings = new SqlPackagePublishSettings();
 		sqlPackageSettings.ToolPath = "./Test/bin/Release/sqlpackage.exe";
 		sqlPackageSettings.SourceFile = dacpacFilePath;
-		sqlPackageSettings.TargetConnectionString = string.Format("Data Source=MAgPIEServer;Initial Catalog=Harvester ({0}); User ID=TeamCityBuilder;Password=WddM8I1nhEgOVh7", configuration);
-
+		sqlPackageSettings.TargetConnectionString = $"Data Source={DatabaseServer};Initial Catalog=Harvester ({configuration}); User ID=TeamCityBuilder;Password=WddM8I1nhEgOVh7";
+		
 		SqlPackagePublish(sqlPackageSettings);
 });
 

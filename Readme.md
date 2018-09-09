@@ -2,7 +2,9 @@
 
 ## Getting Started
 
-MAgPIE (Metrics Aggregation Processing & Intake Engine) is an ETL system developed by Zondervan Library of Taylor University with the help of librarians and student workers. The main entry point for the system is the windows service (Harvester) that handles ingesting data and operation scheduling. When installed the Harvester will generate a configuration file and wait until a complete version is present to begin operations.
+MAgPIE (Metrics Aggregation Processing & Intake Engine) is an ETL system developed by Zondervan Library of Taylor University with the help of librarians and student workers. It was primarily designed to harvest statistics from various electronic resources using primarily COUNTER compliant stastical reports via SUSHI. It has also been used to harvest circulation transactional data from OCLC's WorldShare Management System. 
+
+The main entry point for the system is the windows service (Harvester) that handles ingesting data and operation scheduling. When installed the Harvester will generate a configuration file and wait until a complete version is present to begin operations.
 
 ## Prerequisites
 
@@ -14,6 +16,10 @@ MAgPIE (Metrics Aggregation Processing & Intake Engine) is an ETL system develop
 ## Installing
 
 We use the Cake (C# Make) to handle the building of the project, installation of the windows service, set up of the database it will be using to store the data. A powershell (.ps1) file is located in the root directory "build.ps1" and running it will completely install and deploy MAgPIE though this can be changed by modifying the file or passing different command line arguments.
+
+## Support
+
+Please email magpiezondervan@gmail.com for more support on usage and issues
 
 ## High Level Explanations
 
